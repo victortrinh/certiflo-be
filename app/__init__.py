@@ -6,6 +6,7 @@ from flask_cors import CORS
 
 from .main.controller.user_controller import api as user_ns
 from .main.controller.auth_controller import api as auth_ns
+from .main.controller.resource_controller import api as resource_ns
 
 BASE_URL = '/api'
 
@@ -26,5 +27,6 @@ def after_request(response):
 
 api.add_namespace(user_ns, path=BASE_URL + '/user')
 api.add_namespace(auth_ns, path=BASE_URL + '/auth')
+api.add_namespace(resource_ns, path=BASE_URL + '/resource')
 
 CORS(api.blueprint)
