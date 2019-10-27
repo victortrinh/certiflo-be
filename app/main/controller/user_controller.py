@@ -2,10 +2,12 @@ from flask import request
 from flask_restplus import Resource
 
 from ..dto.user_dto import UserDto
-from ..service.user_service import save_new_user, get_all_users, get_a_user
+from ..service.user_service import save_new_user, get_all_users, get_a_user, change_user_password
 
 api = UserDto.api
 _user = UserDto.user
+_user_change_password = UserDto.user_change_password
+
 
 @api.route('/')
 class UserList(Resource):
@@ -25,6 +27,17 @@ class Register(Resource):
         """Creates a new User """
         data = request.json
         return save_new_user(data=data)
+
+
+@api.route('/changePassword')
+class Register(Resource):
+    @api.response(201, 'User successfully changed password.')
+    @api.doc('Change user password')
+    @api.expect(_user_change_password, validate=True)
+    def post(self):
+        """Changes user password"""
+        data = request.json
+        return change_user_password(data=data)
 
 
 @api.route('/<id>')
