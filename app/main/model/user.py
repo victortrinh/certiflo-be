@@ -23,7 +23,8 @@ class User(db.Model):
 
     @password.setter
     def password(self, password):
-        self.password_hash = flask_bcrypt.generate_password_hash(password).decode('utf-8')
+        self.password_hash = flask_bcrypt.generate_password_hash(
+            password).decode('utf-8')
 
     def check_password(self, password):
         return flask_bcrypt.check_password_hash(self.password_hash, password)
@@ -48,7 +49,7 @@ class User(db.Model):
         except Exception as e:
             return e
 
-    @staticmethod  
+    @staticmethod
     def decode_auth_token(auth_token):
         """
         Decodes the auth token

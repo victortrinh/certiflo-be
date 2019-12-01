@@ -1,0 +1,25 @@
+from .. import db
+
+
+class Opening(db.Model):
+    __tablename__ = "openings"
+
+    id = db.Column(db.Integer, primary_key=True)
+    locationId = db.Column(db.String(255), unique=False)
+    nameEn = db.Column(db.String(255), unique=False)
+    nameFr = db.Column(db.String(255), unique=False)
+    opening = db.Column(db.String(255), unique=False)
+    closing = db.Column(db.String(255), unique=False)
+
+    def __repr__(self):
+        return '<Opening {}>'.format(self.nameEn)
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'locationId': self.locationId,
+            'nameEn': self.nameEn,
+            'nameFr': self.nameFr,
+            'opening': self.opening,
+            'closing': self.closing
+        }
