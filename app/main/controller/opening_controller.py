@@ -1,16 +1,16 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.opening_service import get_openings_by_location_id, save_new_opening, update_opening, delete_opening
+from ..service.opening_service import get_openings, save_new_opening, update_opening, delete_opening
 from ..dto.opening_dto import OpeningDTO
 
 api = OpeningDTO.api
 
 
-@api.route('/<locationId>')
-class GetOpeningsByLocationId(Resource):
-    @api.doc('Get openings by location id')
-    def get(self, locationId):
-        return get_openings_by_location_id(locationId)
+@api.route('/getAll')
+class GetOpenings(Resource):
+    @api.doc('Get openings')
+    def get(self):
+        return get_openings()
 
 
 @api.route('/save')

@@ -1,17 +1,17 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.telephone_service import get_telephones_by_location_id, save_new_telephone, update_telephone, delete_telephone
+from ..service.telephone_service import get_telephones, save_new_telephone, update_telephone, delete_telephone
 from ..dto.telephone_dto import TelephoneDTO
 
 
 api = TelephoneDTO.api
 
 
-@api.route('/<locationId>')
-class GetTelephonesByLocationId(Resource):
-    @api.doc('Get telephones by location id')
-    def get(self, locationId):
-        return get_telephones_by_location_id(locationId)
+@api.route('/getAll')
+class GetTelephones(Resource):
+    @api.doc('Get all telephones')
+    def get(self):
+        return get_telephones()
 
 
 @api.route('/save')

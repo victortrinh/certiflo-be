@@ -1,16 +1,16 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.email_service import get_emails_by_location_id, save_new_email, update_email, delete_email
+from ..service.email_service import get_emails, save_new_email, update_email, delete_email
 from ..dto.email_dto import EmailDTO
 
 api = EmailDTO.api
 
 
-@api.route('/<locationId>')
+@api.route('/getAll')
 class GetEmailsByLocationId(Resource):
-    @api.doc('Get emails by location id')
-    def get(self, locationId):
-        return get_emails_by_location_id(locationId)
+    @api.doc('Get emails')
+    def get(self):
+        return get_emails()
 
 
 @api.route('/save')

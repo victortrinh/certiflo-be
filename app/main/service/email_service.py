@@ -6,8 +6,8 @@ from app.main import db
 from app.main.model.email import Email
 
 
-def get_emails_by_location_id(locationId):
-    emails = Email.query.filter_by(locationId=locationId)
+def get_emails():
+    emails = Email.query.all()
     return jsonify(emails=[email.serialize() for email in emails])
 
 
@@ -19,6 +19,10 @@ def save_new_email(data):
         email=data['email']
     )
     save_changes(new_email)
+    response_object = {
+        'id': new_email.id,
+    }
+    return response_object, 201
 
 
 def update_email(data):

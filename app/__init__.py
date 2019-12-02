@@ -11,6 +11,8 @@ from .main.controller.location_controller import api as location_ns
 from .main.controller.telephone_controller import api as telephone_ns
 from .main.controller.email_controller import api as email_ns
 from .main.controller.opening_controller import api as opening_ns
+from .main.controller.manufacturerImage_controller import api as manufacturerImage_ns
+from .main.controller.manufacturer_controller import api as manufacturer_ns
 
 BASE_URL = '/api'
 
@@ -36,5 +38,7 @@ api.add_namespace(location_ns, path=BASE_URL + '/location')
 api.add_namespace(telephone_ns, path=BASE_URL + '/telephone')
 api.add_namespace(email_ns, path=BASE_URL + '/email')
 api.add_namespace(opening_ns, path=BASE_URL + '/opening')
+api.add_namespace(manufacturerImage_ns, path=BASE_URL + "/manufacturerImage")
+api.add_namespace(manufacturer_ns, path=BASE_URL + "/manufacturer")
 
 CORS(api.blueprint)

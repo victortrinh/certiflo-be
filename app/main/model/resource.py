@@ -8,7 +8,7 @@ class Resource(db.Model):
     language = db.Column(db.String(255), unique=False)
     page = db.Column(db.String(255), unique=False)
     object_key = db.Column(db.String(255), unique=False)
-    resource = db.Column(db.String(255), unique=False)
+    resource = db.Column(db.Text, unique=False)
 
     def __repr__(self):
         return '<Resource {}>'.format(self.resource)

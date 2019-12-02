@@ -6,8 +6,8 @@ from app.main import db
 from app.main.model.telephone import Telephone
 
 
-def get_telephones_by_location_id(locationId):
-    telephones = Telephone.query.filter_by(locationId=locationId)
+def get_telephones():
+    telephones = Telephone.query.all()
     return jsonify(telephones=[telephone.serialize() for telephone in telephones])
 
 
@@ -19,6 +19,10 @@ def save_new_telephone(data):
         telephone=data['telephone']
     )
     save_changes(new_telephone)
+    response_object = {
+        'id': new_telephone.id,
+    }
+    return response_object, 201
 
 
 def update_telephone(data):

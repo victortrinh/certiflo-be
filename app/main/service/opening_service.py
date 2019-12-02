@@ -6,8 +6,8 @@ from app.main import db
 from app.main.model.opening import Opening
 
 
-def get_openings_by_location_id(locationId):
-    openings = Opening.query.filter_by(locationId=locationId)
+def get_openings():
+    openings = Opening.query.all()
     return jsonify(openings=[opening.serialize() for opening in openings])
 
 
@@ -20,6 +20,10 @@ def save_new_opening(data):
         closing=data['closing']
     )
     save_changes(new_opening)
+    response_object = {
+        'id': new_opening.id,
+    }
+    return response_object, 201
 
 
 def update_opening(data):
