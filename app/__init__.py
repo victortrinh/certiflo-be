@@ -13,6 +13,8 @@ from .main.controller.email_controller import api as email_ns
 from .main.controller.opening_controller import api as opening_ns
 from .main.controller.manufacturerImage_controller import api as manufacturerImage_ns
 from .main.controller.manufacturer_controller import api as manufacturer_ns
+from .main.controller.realization_controller import api as realization_ns
+from .main.controller.realization_type_controller import api as realization_type_ns
 
 BASE_URL = '/api'
 
@@ -40,5 +42,7 @@ api.add_namespace(email_ns, path=BASE_URL + '/email')
 api.add_namespace(opening_ns, path=BASE_URL + '/opening')
 api.add_namespace(manufacturerImage_ns, path=BASE_URL + "/manufacturerImage")
 api.add_namespace(manufacturer_ns, path=BASE_URL + "/manufacturer")
+api.add_namespace(realization_ns, path=BASE_URL + "/realization")
+api.add_namespace(realization_type_ns, path=BASE_URL + "/realizationType")
 
 CORS(api.blueprint)
