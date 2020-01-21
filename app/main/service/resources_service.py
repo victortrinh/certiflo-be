@@ -29,6 +29,10 @@ def save_new_resource(data):
         resource=data['resource']
     )
     save_changes(new_resource)
+    response_object = {
+        'id': new_resource.id,
+    }
+    return response_object, 201
 
 
 def update_resource(data):
@@ -48,7 +52,8 @@ def update_resource(data):
 
 def update_resource_by_id_and_language(data):
     query = db.session.query(Resource)
-    query = query.filter(Resource.id == data['id'], Resource.language == data['language'])
+    query = query.filter(
+        Resource.id == data['id'], Resource.language == data['language'])
     record = query.one()
     record.resource = data["resource"]
     db.session.flush()
