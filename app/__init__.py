@@ -11,6 +11,7 @@ from .main.controller.location_controller import api as location_ns
 from .main.controller.telephone_controller import api as telephone_ns
 from .main.controller.email_controller import api as email_ns
 from .main.controller.opening_controller import api as opening_ns
+from .main.controller.product_controller import api as product_ns
 from .main.controller.manufacturerImage_controller import api as manufacturerImage_ns
 from .main.controller.manufacturer_controller import api as manufacturer_ns
 from .main.controller.realization_controller import api as realization_ns
@@ -41,6 +42,7 @@ api.add_namespace(location_ns, path=BASE_URL + '/location')
 api.add_namespace(telephone_ns, path=BASE_URL + '/telephone')
 api.add_namespace(email_ns, path=BASE_URL + '/email')
 api.add_namespace(opening_ns, path=BASE_URL + '/opening')
+api.add_namespace(product_ns, path=BASE_URL + '/product')
 api.add_namespace(manufacturerImage_ns, path=BASE_URL + "/manufacturerImage")
 api.add_namespace(manufacturer_ns, path=BASE_URL + "/manufacturer")
 api.add_namespace(realization_ns, path=BASE_URL + "/realization")
