@@ -11,7 +11,7 @@ class OpeningDTO:
         'closing': fields.String(required=True, description='Closing')
     })
     full_opening = api.model('Full opening', {
-        'id': fields.Integer(required=True, description='The telephone id'),
+        'id': fields.Integer(required=True, description='The opening id'),
         'locationId': fields.String(required=True, description='The Opening location id'),
         'nameEn': fields.String(required=True, description='Opening name in french'),
         'nameFr': fields.String(required=True, description='Opening name in english'),
