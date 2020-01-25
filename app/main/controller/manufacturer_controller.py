@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.manufacturer_service import get_all_manufacturer, save_new_manufacturer, delete_manufacturer
+from ..service.manufacturer_service import get_all_manufacturer, save_new_manufacturer, delete_manufacturer, update_manufacturer
 from ..dto.manufacturer_dto import ManufacturerDTO
 
 
@@ -21,6 +21,14 @@ class SaveManufacturer(Resource):
     def post(self):
         data = request.json
         return save_new_manufacturer(data)
+
+@api.route('/update')
+class UpdateManufacturer(Resource):
+    @api.doc('Update manufacturer')
+    @api.expect(ManufacturerDTO.manufacturer, validate=True)
+    def put(self):
+        data = request.json
+        return update_manufacturer(data)
 
 
 @api.route('/delete')
