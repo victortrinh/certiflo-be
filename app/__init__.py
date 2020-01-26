@@ -12,13 +12,15 @@ from .main.controller.telephone_controller import api as telephone_ns
 from .main.controller.email_controller import api as email_ns
 from .main.controller.opening_controller import api as opening_ns
 from .main.controller.product_controller import api as product_ns
-from .main.controller.manufacturerImage_controller import api as manufacturerImage_ns
+from .main.controller.manufacturer_image_controller import api as manufacturer_image_ns
 from .main.controller.manufacturer_controller import api as manufacturer_ns
 from .main.controller.realization_controller import api as realization_ns
 from .main.controller.realization_type_controller import api as realization_type_ns
 from .main.controller.employee_controller import api as employee_ns
-from .main.controller.tankerType_controller import api as tankerType_ns
+from .main.controller.tanker_type_controller import api as tanker_type_ns
 from .main.controller.tanker_controller import api as tanker_ns
+from .main.controller.gallery_image_controller import api as gallery_image_ns
+from .main.controller.gallery_controller import api as gallery_ns
 
 BASE_URL = '/api'
 
@@ -45,12 +47,14 @@ api.add_namespace(telephone_ns, path=BASE_URL + '/telephone')
 api.add_namespace(email_ns, path=BASE_URL + '/email')
 api.add_namespace(opening_ns, path=BASE_URL + '/opening')
 api.add_namespace(product_ns, path=BASE_URL + '/product')
-api.add_namespace(manufacturerImage_ns, path=BASE_URL + "/manufacturerImage")
+api.add_namespace(manufacturer_image_ns, path=BASE_URL + "/manufacturerImage")
 api.add_namespace(manufacturer_ns, path=BASE_URL + "/manufacturer")
 api.add_namespace(realization_ns, path=BASE_URL + "/realization")
 api.add_namespace(realization_type_ns, path=BASE_URL + "/realizationType")
 api.add_namespace(employee_ns, path=BASE_URL + "/employee")
-api.add_namespace(tankerType_ns, path=BASE_URL + "/tankerType")
+api.add_namespace(tanker_type_ns, path=BASE_URL + "/tankerType")
 api.add_namespace(tanker_ns, path=BASE_URL + "/tanker")
+api.add_namespace(gallery_image_ns, path=BASE_URL + "/galleryImage")
+api.add_namespace(gallery_ns, path=BASE_URL + "/gallery")
 
 CORS(api.blueprint)
