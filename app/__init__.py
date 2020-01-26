@@ -54,7 +54,6 @@ api.add_namespace(realization_type_ns, path=BASE_URL + "/realizationType")
 api.add_namespace(employee_ns, path=BASE_URL + "/employee")
 api.add_namespace(assembly_ns, path=BASE_URL + '/assembly')
 api.add_namespace(assembly_type_ns, path=BASE_URL + '/assemblyType')
-api.add_namespace(assembly_type_ns, path=BASE_URL + '/assembly_type')
 api.add_namespace(tankerType_ns, path=BASE_URL + "/tankerType")
 api.add_namespace(tanker_ns, path=BASE_URL + "/tanker")
 
