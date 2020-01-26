@@ -8,12 +8,11 @@ from app.main.model.assemblyType import AssemblyType
 
 def get_assembly_types():
     assemblyTypes = AssemblyType.query.all()
-    return jsonify(assemblyTypes=[assemblyTypes.serialize() for assemblyType in assemblyTypes])
+    return jsonify(assemblyTypes=[assemblyType.serialize() for assemblyType in assemblyTypes])
 
 
 def save_new_assembly_type(data):
     new_assemblyType = AssemblyType(
-        id=data['id'],
         nameFr=data['nameFr'],
         nameEn=data['nameEn'],
     )

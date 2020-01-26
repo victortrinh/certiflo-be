@@ -13,7 +13,6 @@ def get_assemblies():
 
 def save_new_assembly(data):
     new_assembly = Assembly(
-        id=data['id'],
         assemblyTypeId=data['assemblyTypeId'],
         nameFr=data['nameFr'],
         nameEn=data['nameEn'],
