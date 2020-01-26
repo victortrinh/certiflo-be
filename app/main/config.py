@@ -4,13 +4,14 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'ghghuvtusdalshurhtycakydiriybae'
+    SECRET_KEY = os.environ.get(
+        'SECRET_KEY') or 'ghghuvtusdalshurhtycakydiriybae'
     DEBUG = False
 
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI =  'postgres://postgres:admin@localhost:5433/certiflo'
+    SQLALCHEMY_DATABASE_URI = 'postgres://postgres:postgres@localhost:5432/certiflo'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
