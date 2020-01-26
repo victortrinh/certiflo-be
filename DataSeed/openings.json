@@ -1,0 +1,33 @@
+[{
+        "closing": "15H30",
+        "id": 1,
+        "locationId": "1",
+        "nameEn": "Service",
+        "nameFr": "Service",
+        "opening": "7H00"
+    },
+    {
+        "closing": "16H00",
+        "id": 2,
+        "locationId": "1",
+        "nameEn": "Sales",
+        "nameFr": "Vente",
+        "opening": "7H00"
+    },
+    {
+        "closing": "07H00",
+        "id": 4,
+        "locationId": "2",
+        "nameEn": "Service",
+        "nameFr": "Service",
+        "opening": "07H00"
+    },
+    {
+        "closing": "07H00",
+        "id": 5,
+        "locationId": "2",
+        "nameEn": "Sales",
+        "nameFr": "Ventes",
+        "opening": "07H00"
+    }
+]

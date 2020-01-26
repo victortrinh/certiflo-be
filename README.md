@@ -54,14 +54,24 @@ If you find a bug or have an idea for an improvement, please first have a look a
 - [X] Commit and push
 - [X] Create a pull request
 
+# Seed Data
+For noob developers using terminal under windows, 
+1. Add the following line in ~/.bash_profile: alias jq=<path to repo>/DataSeed/jq.exe
+2. Run the following command: source <path to repo>/DataSeed/seedScript
+3. To seed all the data on an empty database, run SeedAll <serverUrl> 
+4. To seed for a single endpoint, run Seed <serverUrl> <payload file> <post url>
+   1. For example, to seed email: Seed localhost:5000 emails.json email/save
+
+Note that the 2020 backlog includes upsert puts, which will allow to create resources with provided ids
+
 # Branch naming
 
-| Instance        | Branch                                              | Description, Instructions, Notes                   |
-|-----------------|-----------------------------------------------------|----------------------------------------------------|
-| Stable          | master                                              | Accepts merges from Development and Hotfixes       |
-| Development     | dev                                                 | Accepts merges from Features / Issues and Hotfixes |
-| Features/Issues | feature/[Issue number]-[Short feature description]  | Always branch off HEAD or dev                      |
-| Hotfix          | fix/[Issue number]-[Short feature description]      | Always branch off Stable                           |
+| Instance        | Branch                                             | Description, Instructions, Notes                   |
+| --------------- | -------------------------------------------------- | -------------------------------------------------- |
+| Stable          | master                                             | Accepts merges from Development and Hotfixes       |
+| Development     | dev                                                | Accepts merges from Features / Issues and Hotfixes |
+| Features/Issues | feature/[Issue number]-[Short feature description] | Always branch off HEAD or dev                      |
+| Hotfix          | fix/[Issue number]-[Short feature description]     | Always branch off Stable                           |
 
 # Commits syntax
 

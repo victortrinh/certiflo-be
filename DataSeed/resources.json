@@ -1,0 +1,1870 @@
+[{
+        "id": 262,
+        "language": "fr",
+        "object_key": "nameEn",
+        "page": "common",
+        "resource": "Nom en anglais"
+    },
+    {
+        "id": 263,
+        "language": "fr",
+        "object_key": "nameFr",
+        "page": "common",
+        "resource": "Nom en français"
+    },
+    {
+        "id": 189,
+        "language": "en",
+        "object_key": "industrial-sales",
+        "page": "contact-data",
+        "resource": "gerry.cyr@certiflo.ca"
+    },
+    {
+        "id": 265,
+        "language": "en",
+        "object_key": "nameEn",
+        "page": "common",
+        "resource": "Name in english"
+    },
+    {
+        "id": 266,
+        "language": "en",
+        "object_key": "opening",
+        "page": "edit-contact",
+        "resource": "Opening time"
+    },
+    {
+        "id": 267,
+        "language": "fr",
+        "object_key": "opening",
+        "page": "edit-contact",
+        "resource": "Heure d'ouverture"
+    },
+    {
+        "id": 268,
+        "language": "fr",
+        "object_key": "closing",
+        "page": "edit-contact",
+        "resource": "Heure de fermeture"
+    },
+    {
+        "id": 270,
+        "language": "en",
+        "object_key": "telephone",
+        "page": "common",
+        "resource": "Telephone"
+    },
+    {
+        "id": 9,
+        "language": "en",
+        "object_key": "electronic-system",
+        "page": "navigation",
+        "resource": "Electronic system"
+    },
+    {
+        "id": 273,
+        "language": "en",
+        "object_key": "add",
+        "page": "edit-contact",
+        "resource": "Add"
+    },
+    {
+        "id": 11,
+        "language": "en",
+        "object_key": "tankers",
+        "page": "navigation",
+        "resource": "Tankers"
+    },
+    {
+        "id": 274,
+        "language": "en",
+        "object_key": "locations",
+        "page": "common",
+        "resource": "Locations"
+    },
+    {
+        "id": 275,
+        "language": "en",
+        "object_key": "emails",
+        "page": "common",
+        "resource": "Emails"
+    },
+    {
+        "id": 15,
+        "language": "en",
+        "object_key": "services",
+        "page": "navigation",
+        "resource": "Services"
+    },
+    {
+        "id": 281,
+        "language": "en",
+        "object_key": "openings",
+        "page": "common",
+        "resource": "Opening hours"
+    },
+    {
+        "id": 294,
+        "language": "en",
+        "object_key": "cancel",
+        "page": "common",
+        "resource": "Cancel"
+    },
+    {
+        "id": 31,
+        "language": "fr",
+        "object_key": "current-employees",
+        "page": "navigation",
+        "resource": "Personnel"
+    },
+    {
+        "id": 13,
+        "language": "en",
+        "object_key": "counters-registers-pumps",
+        "page": "navigation",
+        "resource": "Meters, registers and pumps"
+    },
+    {
+        "id": 23,
+        "language": "en",
+        "object_key": "certification",
+        "page": "navigation",
+        "resource": "Certification"
+    },
+    {
+        "id": 17,
+        "language": "en",
+        "object_key": "services-reparations",
+        "page": "navigation",
+        "resource": "Service and repairs"
+    },
+    {
+        "id": 25,
+        "language": "en",
+        "object_key": "useful-documents",
+        "page": "navigation",
+        "resource": "Useful documents"
+    },
+    {
+        "id": 19,
+        "language": "en",
+        "object_key": "calibration-compteurs",
+        "page": "navigation",
+        "resource": "Meter calibration"
+    },
+    {
+        "id": 27,
+        "language": "fr",
+        "object_key": "about-us",
+        "page": "navigation",
+        "resource": "À propos de nous"
+    },
+    {
+        "id": 21,
+        "language": "en",
+        "object_key": "tankers-inspection",
+        "page": "navigation",
+        "resource": "Tank inspection"
+    },
+    {
+        "id": 29,
+        "language": "en",
+        "object_key": "mission-commitment-values",
+        "page": "navigation",
+        "resource": "Mission, commitment and values"
+    },
+    {
+        "id": 33,
+        "language": "en",
+        "object_key": "realizations",
+        "page": "navigation",
+        "resource": "Our achievements"
+    },
+    {
+        "id": 37,
+        "language": "en",
+        "object_key": "manufacturers",
+        "page": "navigation",
+        "resource": "Manufacturers"
+    },
+    {
+        "id": 329,
+        "language": "fr",
+        "object_key": "edit-achievements",
+        "page": "admin",
+        "resource": "Modifier les réalisations"
+    },
+    {
+        "id": 39,
+        "language": "fr",
+        "object_key": "gallery",
+        "page": "navigation",
+        "resource": "Gallerie"
+    },
+    {
+        "id": 330,
+        "language": "en",
+        "object_key": "edit-achievements",
+        "page": "admin",
+        "resource": "Edit achievements"
+    },
+    {
+        "id": 41,
+        "language": "en",
+        "object_key": "careers",
+        "page": "navigation",
+        "resource": "Careers"
+    },
+    {
+        "id": 331,
+        "language": "fr",
+        "object_key": "achievements",
+        "page": "common",
+        "resource": "Réalisations"
+    },
+    {
+        "id": 43,
+        "language": "fr",
+        "object_key": "join-us",
+        "page": "navigation",
+        "resource": "Nous joindre"
+    },
+    {
+        "id": 44,
+        "language": "fr",
+        "object_key": "logout",
+        "page": "admin",
+        "resource": "Se déconnecter"
+    },
+    {
+        "id": 45,
+        "language": "en",
+        "object_key": "logout",
+        "page": "admin",
+        "resource": "Logout"
+    },
+    {
+        "id": 46,
+        "language": "fr",
+        "object_key": "object-key",
+        "page": "edit-resources",
+        "resource": "Clé"
+    },
+    {
+        "id": 47,
+        "language": "en",
+        "object_key": "object-key",
+        "page": "edit-resources",
+        "resource": "Key"
+    },
+    {
+        "id": 48,
+        "language": "en",
+        "object_key": "fr",
+        "page": "edit-resources",
+        "resource": "French"
+    },
+    {
+        "id": 49,
+        "language": "en",
+        "object_key": "en",
+        "page": "edit-resources",
+        "resource": "English"
+    },
+    {
+        "id": 50,
+        "language": "fr",
+        "object_key": "en",
+        "page": "edit-resources",
+        "resource": "Anglais"
+    },
+    {
+        "id": 51,
+        "language": "fr",
+        "object_key": "fr",
+        "page": "edit-resources",
+        "resource": "Français"
+    },
+    {
+        "id": 52,
+        "language": "fr",
+        "object_key": "language",
+        "page": "edit-resources",
+        "resource": "Langue"
+    },
+    {
+        "id": 53,
+        "language": "en",
+        "object_key": "language",
+        "page": "edit-resources",
+        "resource": "Language"
+    },
+    {
+        "id": 54,
+        "language": "en",
+        "object_key": "resource",
+        "page": "edit-resources",
+        "resource": "Resource"
+    },
+    {
+        "id": 55,
+        "language": "fr",
+        "object_key": "resource",
+        "page": "edit-resources",
+        "resource": "Resource"
+    },
+    {
+        "id": 190,
+        "language": "fr",
+        "object_key": "industrial-sales",
+        "page": "contact-data",
+        "resource": "gerry.cyr@certiflo.ca"
+    },
+    {
+        "id": 63,
+        "language": "en",
+        "object_key": "mission-title",
+        "page": "mission",
+        "resource": "Mission"
+    },
+    {
+        "id": 76,
+        "language": "en",
+        "object_key": "mission-title",
+        "page": "home",
+        "resource": "Our mission"
+    },
+    {
+        "id": 5,
+        "language": "en",
+        "object_key": "products",
+        "page": "navigation",
+        "resource": "Products"
+    },
+    {
+        "id": 332,
+        "language": "en",
+        "object_key": "achievements",
+        "page": "common",
+        "resource": "Achievements"
+    },
+    {
+        "id": 6,
+        "language": "fr",
+        "object_key": "parts",
+        "page": "navigation",
+        "resource": "Pièces"
+    },
+    {
+        "id": 56,
+        "language": "fr",
+        "object_key": "main-text",
+        "page": "home",
+        "resource": "Manufacturier de camion citernes"
+    },
+    {
+        "id": 57,
+        "language": "en",
+        "object_key": "main-text",
+        "page": "home",
+        "resource": "Tanker trucks manufacturer"
+    },
+    {
+        "id": 58,
+        "language": "fr",
+        "object_key": "secondary-text",
+        "page": "home",
+        "resource": "Service d’entretien et de réparation après-vente"
+    },
+    {
+        "id": 59,
+        "language": "en",
+        "object_key": "secondary-text",
+        "page": "home",
+        "resource": "After sales service | Maintenance and repairs"
+    },
+    {
+        "id": 61,
+        "language": "fr",
+        "object_key": "our-sister-companies-title",
+        "page": "home",
+        "resource": "Nos compagnies soeurs"
+    },
+    {
+        "id": 347,
+        "language": "en",
+        "object_key": "select-pictures-description",
+        "page": "super",
+        "resource": "Add a picture"
+    },
+    {
+        "id": 350,
+        "language": "en",
+        "object_key": "select-pictures",
+        "page": "super",
+        "resource": "Upload picture"
+    },
+    {
+        "id": 352,
+        "language": "en",
+        "object_key": "english",
+        "page": "super",
+        "resource": "English"
+    },
+    {
+        "id": 354,
+        "language": "en",
+        "object_key": "french",
+        "page": "super",
+        "resource": "French"
+    },
+    {
+        "id": 191,
+        "language": "fr",
+        "object_key": "municipal-industrial-sales",
+        "page": "contact-data",
+        "resource": "patrick.germain@certiflo.ca"
+    },
+    {
+        "id": 78,
+        "language": "en",
+        "object_key": "commitment-title",
+        "page": "home",
+        "resource": "Our commitment"
+    },
+    {
+        "id": 79,
+        "language": "en",
+        "object_key": "commitment",
+        "page": "home",
+        "resource": "To offer the service and support for the products we sell and to maintain an adequate inventory of parts to meet our commitment."
+    },
+    {
+        "id": 80,
+        "language": "en",
+        "object_key": "values-title",
+        "page": "home",
+        "resource": "Our values"
+    },
+    {
+        "id": 84,
+        "language": "fr",
+        "object_key": "commitment-title",
+        "page": "home",
+        "resource": "Notre engagement"
+    },
+    {
+        "id": 192,
+        "language": "en",
+        "object_key": "municipal-industrial-sales",
+        "page": "contact-data",
+        "resource": "patrick.germain@certiflo.ca"
+    },
+    {
+        "id": 193,
+        "language": "en",
+        "object_key": "new-mounts-and-remounts",
+        "page": "contact-data",
+        "resource": "jocelyn.sirois@certiflo.ca"
+    },
+    {
+        "id": 60,
+        "language": "en",
+        "object_key": "our-sister-companies-title",
+        "page": "home",
+        "resource": "Our sister companies"
+    },
+    {
+        "id": 181,
+        "language": "fr",
+        "object_key": "service",
+        "page": "contact-data",
+        "resource": "pierre.lafleche@certiflo.ca"
+    },
+    {
+        "id": 182,
+        "language": "en",
+        "object_key": "service",
+        "page": "contact-data",
+        "resource": "pierre.lafleche@certiflo.ca"
+    },
+    {
+        "id": 183,
+        "language": "en",
+        "object_key": "service-electronic",
+        "page": "contact-data",
+        "resource": "pascal.desjardins@certiflo.ca"
+    },
+    {
+        "id": 184,
+        "language": "fr",
+        "object_key": "service-electronic",
+        "page": "contact-data",
+        "resource": "pascal.desjardins@certiflo.ca"
+    },
+    {
+        "id": 399,
+        "language": "fr",
+        "object_key": "edit-employees",
+        "page": "admin",
+        "resource": "Modifier les employés"
+    },
+    {
+        "id": 187,
+        "language": "fr",
+        "object_key": "electronic-sales",
+        "page": "contact-data",
+        "resource": "bernard.gelinas@certiflo.ca"
+    },
+    {
+        "id": 188,
+        "language": "en",
+        "object_key": "electronic-sales",
+        "page": "contact-data",
+        "resource": "bernard.gelinas@certiflo.ca"
+    },
+    {
+        "id": 194,
+        "language": "fr",
+        "object_key": "new-mounts-and-remounts",
+        "page": "contact-data",
+        "resource": "jocelyn.sirois@certiflo.ca"
+    },
+    {
+        "id": 195,
+        "language": "fr",
+        "object_key": "tank-sales",
+        "page": "contact-data",
+        "resource": "yves.talbot@certiflo.ca"
+    },
+    {
+        "id": 196,
+        "language": "en",
+        "object_key": "tank-sales",
+        "page": "contact-data",
+        "resource": "yves.talbot@certiflo.ca"
+    },
+    {
+        "id": 197,
+        "language": "en",
+        "object_key": "accounting",
+        "page": "contact-data",
+        "resource": "comptabilite@certiflo.ca"
+    },
+    {
+        "id": 198,
+        "language": "fr",
+        "object_key": "accounting",
+        "page": "contact-data",
+        "resource": "comptabilite@certiflo.ca"
+    },
+    {
+        "id": 199,
+        "language": "fr",
+        "object_key": "payables",
+        "page": "contact-data",
+        "resource": "payables@certiflo.ca"
+    },
+    {
+        "id": 200,
+        "language": "en",
+        "object_key": "payables",
+        "page": "contact-data",
+        "resource": "payables@certiflo.ca"
+    },
+    {
+        "id": 201,
+        "language": "en",
+        "object_key": "purchasing",
+        "page": "contact-data",
+        "resource": "acheteur-buyer@certiflo.ca"
+    },
+    {
+        "id": 202,
+        "language": "fr",
+        "object_key": "purchasing",
+        "page": "contact-data",
+        "resource": "acheteur-buyer@certiflo.ca"
+    },
+    {
+        "id": 81,
+        "language": "en",
+        "object_key": "values",
+        "page": "home",
+        "resource": "The Certiflo group of companies favors long term relations with its clients, personnel and suppliers based on mutual respect, quality and security."
+    },
+    {
+        "id": 179,
+        "language": "en",
+        "object_key": "general-information",
+        "page": "contact-data",
+        "resource": "certiflo@certiflo.ca"
+    },
+    {
+        "id": 82,
+        "language": "fr",
+        "object_key": "mission-title",
+        "page": "home",
+        "resource": "Notre mission"
+    },
+    {
+        "id": 83,
+        "language": "fr",
+        "object_key": "mission",
+        "page": "home",
+        "resource": "Vendre, faire l’assemblage et maintenir en condition optimale de fonctionnement des équipements de qualité pour assister nos clients dans la rencontre des exigences et normes de l’industrie."
+    },
+    {
+        "id": 34,
+        "language": "en",
+        "object_key": "assemble-mount",
+        "page": "navigation",
+        "resource": "Assembly / Mount"
+    },
+    {
+        "id": 400,
+        "language": "en",
+        "object_key": "edit-employees",
+        "page": "admin",
+        "resource": "Edit employees"
+    },
+    {
+        "id": 401,
+        "language": "fr",
+        "object_key": "first-name",
+        "page": "super",
+        "resource": "Prénom"
+    },
+    {
+        "id": 402,
+        "language": "en",
+        "object_key": "first-name",
+        "page": "super",
+        "resource": "First name"
+    },
+    {
+        "id": 403,
+        "language": "fr",
+        "object_key": "last-name",
+        "page": "super",
+        "resource": "Nom"
+    },
+    {
+        "id": 404,
+        "language": "en",
+        "object_key": "last-name",
+        "page": "super",
+        "resource": "Last name"
+    },
+    {
+        "id": 405,
+        "language": "fr",
+        "object_key": "role",
+        "page": "super",
+        "resource": "Rôle"
+    },
+    {
+        "id": 406,
+        "language": "en",
+        "object_key": "role",
+        "page": "super",
+        "resource": "Role"
+    },
+    {
+        "id": 407,
+        "language": "fr",
+        "object_key": "email",
+        "page": "super",
+        "resource": "Courriel"
+    },
+    {
+        "id": 408,
+        "language": "en",
+        "object_key": "email",
+        "page": "super",
+        "resource": "Email"
+    },
+    {
+        "id": 85,
+        "language": "fr",
+        "object_key": "commitment",
+        "page": "home",
+        "resource": "Offrir le service et le support pour les produits que nous vendons et à cette fin, maintenir un inventaire de pièces adéquat."
+    },
+    {
+        "id": 86,
+        "language": "fr",
+        "object_key": "values-title",
+        "page": "home",
+        "resource": "Nos valeurs"
+    },
+    {
+        "id": 264,
+        "language": "en",
+        "object_key": "nameFr",
+        "page": "common",
+        "resource": "Name in french"
+    },
+    {
+        "id": 269,
+        "language": "en",
+        "object_key": "closing",
+        "page": "edit-contact",
+        "resource": "Closing time"
+    },
+    {
+        "id": 271,
+        "language": "fr",
+        "object_key": "telephone",
+        "page": "common",
+        "resource": "Téléphone"
+    },
+    {
+        "id": 272,
+        "language": "fr",
+        "object_key": "add",
+        "page": "edit-contact",
+        "resource": "Ajouter"
+    },
+    {
+        "id": 276,
+        "language": "en",
+        "object_key": "telephones",
+        "page": "common",
+        "resource": "Telephones"
+    },
+    {
+        "id": 277,
+        "language": "fr",
+        "object_key": "telephones",
+        "page": "common",
+        "resource": "Téléphones"
+    },
+    {
+        "id": 278,
+        "language": "fr",
+        "object_key": "openings",
+        "page": "common",
+        "resource": "Heures d'ouverture"
+    },
+    {
+        "id": 279,
+        "language": "fr",
+        "object_key": "emails",
+        "page": "common",
+        "resource": "Courriels"
+    },
+    {
+        "id": 280,
+        "language": "fr",
+        "object_key": "locations",
+        "page": "common",
+        "resource": "Emplacements"
+    },
+    {
+        "id": 297,
+        "language": "en",
+        "object_key": "remove-manufacturer",
+        "page": "edit-manufacturers",
+        "resource": "Are you sure you want to remove this manufacturer?"
+    },
+    {
+        "id": 298,
+        "language": "fr",
+        "object_key": "remove-manufacturer",
+        "page": "edit-manufacturers",
+        "resource": "Êtes-vous certain de vouloir supprimer ce manufacturier?"
+    },
+    {
+        "id": 301,
+        "language": "en",
+        "object_key": "confirm-delete",
+        "page": "common",
+        "resource": "Are you sure you want to delete?"
+    },
+    {
+        "id": 302,
+        "language": "fr",
+        "object_key": "confirm-delete",
+        "page": "common",
+        "resource": "Êtes-vous certain de vouloir supprimer?"
+    },
+    {
+        "id": 307,
+        "language": "fr",
+        "object_key": "add",
+        "page": "common",
+        "resource": "Ajouter"
+    },
+    {
+        "id": 311,
+        "language": "fr",
+        "object_key": "resources",
+        "page": "common",
+        "resource": "Resources"
+    },
+    {
+        "id": 312,
+        "language": "en",
+        "object_key": "resources",
+        "page": "common",
+        "resource": "Resources"
+    },
+    {
+        "id": 333,
+        "language": "fr",
+        "object_key": "edit-super-resources",
+        "page": "super",
+        "resource": "Modifier les resources BE"
+    },
+    {
+        "id": 334,
+        "language": "en",
+        "object_key": "edit-super-resources",
+        "page": "super",
+        "resource": "Edit BE resources"
+    },
+    {
+        "id": 335,
+        "language": "fr",
+        "object_key": "add-realization-types",
+        "page": "super",
+        "resource": "Ajouter un type de réalisations"
+    },
+    {
+        "id": 336,
+        "language": "en",
+        "object_key": "add-realization-types",
+        "page": "super",
+        "resource": "Add achievement type"
+    },
+    {
+        "id": 337,
+        "language": "fr",
+        "object_key": "realizationTypeEn",
+        "page": "super",
+        "resource": "Type de réalisation en anglais"
+    },
+    {
+        "id": 338,
+        "language": "en",
+        "object_key": "realizationTypeEn",
+        "page": "super",
+        "resource": "Achievement type in english"
+    },
+    {
+        "id": 339,
+        "language": "fr",
+        "object_key": "realizationTypeFr",
+        "page": "super",
+        "resource": "Type de réalisation en français"
+    },
+    {
+        "id": 340,
+        "language": "en",
+        "object_key": "realizationTypeFr",
+        "page": "super",
+        "resource": "Achievement type in french"
+    },
+    {
+        "id": 348,
+        "language": "fr",
+        "object_key": "select-pictures-description",
+        "page": "super",
+        "resource": "Ajouter une photo"
+    },
+    {
+        "id": 349,
+        "language": "fr",
+        "object_key": "select-pictures",
+        "page": "super",
+        "resource": "Téléverser une photo"
+    },
+    {
+        "id": 351,
+        "language": "fr",
+        "object_key": "english",
+        "page": "super",
+        "resource": "Anglais"
+    },
+    {
+        "id": 353,
+        "language": "fr",
+        "object_key": "french",
+        "page": "super",
+        "resource": "Français"
+    },
+    {
+        "id": 409,
+        "language": "fr",
+        "object_key": "description",
+        "page": "super",
+        "resource": "Description"
+    },
+    {
+        "id": 410,
+        "language": "en",
+        "object_key": "description",
+        "page": "super",
+        "resource": "Description"
+    },
+    {
+        "id": 411,
+        "language": "fr",
+        "object_key": "name",
+        "page": "super",
+        "resource": "Nom"
+    },
+    {
+        "id": 412,
+        "language": "en",
+        "object_key": "name",
+        "page": "super",
+        "resource": "Name"
+    },
+    {
+        "id": 413,
+        "language": "fr",
+        "object_key": "company",
+        "page": "super",
+        "resource": "Compagnie"
+    },
+    {
+        "id": 414,
+        "language": "en",
+        "object_key": "company",
+        "page": "super",
+        "resource": "Company"
+    },
+    {
+        "id": 415,
+        "language": "fr",
+        "object_key": "employees",
+        "page": "common",
+        "resource": "Personnels"
+    },
+    {
+        "id": 416,
+        "language": "en",
+        "object_key": "employees",
+        "page": "common",
+        "resource": "Employees"
+    },
+    {
+        "id": 282,
+        "language": "en",
+        "object_key": "edit-manufacturers",
+        "page": "admin",
+        "resource": "Edit manufacturers"
+    },
+    {
+        "id": 94,
+        "language": "fr",
+        "object_key": "copyright",
+        "page": "footer",
+        "resource": "Tous droits reservés © 2015 Certiflo Inc."
+    },
+    {
+        "id": 95,
+        "language": "en",
+        "object_key": "copyright",
+        "page": "footer",
+        "resource": "All rights reserved © 2015 Certiflo Inc."
+    },
+    {
+        "id": 96,
+        "language": "fr",
+        "object_key": "settings",
+        "page": "admin",
+        "resource": "Paramètres"
+    },
+    {
+        "id": 97,
+        "language": "en",
+        "object_key": "settings",
+        "page": "admin",
+        "resource": "Settings"
+    },
+    {
+        "id": 98,
+        "language": "en",
+        "object_key": "change-password",
+        "page": "admin",
+        "resource": "Change password"
+    },
+    {
+        "id": 99,
+        "language": "fr",
+        "object_key": "change-password",
+        "page": "admin",
+        "resource": "Modifier le mot de passe"
+    },
+    {
+        "id": 100,
+        "language": "fr",
+        "object_key": "edit-resources",
+        "page": "admin",
+        "resource": "Modifier les resources"
+    },
+    {
+        "id": 101,
+        "language": "en",
+        "object_key": "edit-resources",
+        "page": "admin",
+        "resource": "Edit resources"
+    },
+    {
+        "id": 102,
+        "language": "en",
+        "object_key": "edit-navigation-resources",
+        "page": "admin",
+        "resource": "Edit navigation resources"
+    },
+    {
+        "id": 103,
+        "language": "fr",
+        "object_key": "edit-navigation-resources",
+        "page": "admin",
+        "resource": "Modifier les resources de navigation"
+    },
+    {
+        "id": 105,
+        "language": "en",
+        "object_key": "edit-home-resources",
+        "page": "admin",
+        "resource": "Edit home resources"
+    },
+    {
+        "id": 106,
+        "language": "en",
+        "object_key": "email",
+        "page": "common",
+        "resource": "E-mail"
+    },
+    {
+        "id": 107,
+        "language": "fr",
+        "object_key": "email",
+        "page": "common",
+        "resource": "Courriel"
+    },
+    {
+        "id": 109,
+        "language": "en",
+        "object_key": "error-email-required",
+        "page": "common",
+        "resource": "The e-mail is required"
+    },
+    {
+        "id": 108,
+        "language": "fr",
+        "object_key": "error-email-required",
+        "page": "common",
+        "resource": "Le courriel est requis"
+    },
+    {
+        "id": 110,
+        "language": "en",
+        "object_key": "password",
+        "page": "common",
+        "resource": "Password"
+    },
+    {
+        "id": 111,
+        "language": "fr",
+        "object_key": "password",
+        "page": "common",
+        "resource": "Mot de passe"
+    },
+    {
+        "id": 112,
+        "language": "fr",
+        "object_key": "error-password-required",
+        "page": "common",
+        "resource": "Le mot de passe est requis"
+    },
+    {
+        "id": 113,
+        "language": "en",
+        "object_key": "error-password-required",
+        "page": "common",
+        "resource": "Password is required"
+    },
+    {
+        "id": 114,
+        "language": "en",
+        "object_key": "confirm-password",
+        "page": "common",
+        "resource": "Confirm password"
+    },
+    {
+        "id": 115,
+        "language": "fr",
+        "object_key": "confirm-password",
+        "page": "common",
+        "resource": "Confirmer le mot de passe"
+    },
+    {
+        "id": 116,
+        "language": "fr",
+        "object_key": "error-confirm-password-required",
+        "page": "common",
+        "resource": "La confirmation du mot de passe est requise"
+    },
+    {
+        "id": 117,
+        "language": "en",
+        "object_key": "error-confirm-password-required",
+        "page": "common",
+        "resource": "Password confirmation is required"
+    },
+    {
+        "id": 118,
+        "language": "en",
+        "object_key": "change-password",
+        "page": "common",
+        "resource": "Change password"
+    },
+    {
+        "id": 119,
+        "language": "fr",
+        "object_key": "change-password",
+        "page": "common",
+        "resource": "Changer le mot de passe"
+    },
+    {
+        "id": 120,
+        "language": "fr",
+        "object_key": "login",
+        "page": "common",
+        "resource": "Se connecter"
+    },
+    {
+        "id": 121,
+        "language": "en",
+        "object_key": "login",
+        "page": "common",
+        "resource": "Login"
+    },
+    {
+        "id": 122,
+        "language": "en",
+        "object_key": "edit-common-resources",
+        "page": "admin",
+        "resource": "Edit common resources"
+    },
+    {
+        "id": 123,
+        "language": "fr",
+        "object_key": "edit-common-resources",
+        "page": "admin",
+        "resource": "Modifier les resources communes"
+    },
+    {
+        "id": 124,
+        "language": "fr",
+        "object_key": "edit-admin-resources",
+        "page": "admin",
+        "resource": "Modifier les resources des administrateurs"
+    },
+    {
+        "id": 125,
+        "language": "en",
+        "object_key": "edit-admin-resources",
+        "page": "admin",
+        "resource": "Edit administrator resources"
+    },
+    {
+        "id": 126,
+        "language": "en",
+        "object_key": "edit",
+        "page": "admin",
+        "resource": "Edit"
+    },
+    {
+        "id": 127,
+        "language": "fr",
+        "object_key": "edit",
+        "page": "admin",
+        "resource": "Modifier"
+    },
+    {
+        "id": 283,
+        "language": "fr",
+        "object_key": "edit-manufacturers",
+        "page": "admin",
+        "resource": "Modifier les manufacturiers"
+    },
+    {
+        "id": 286,
+        "language": "fr",
+        "object_key": "select-pictures-description",
+        "page": "edit-manufacturers",
+        "resource": "Ajouter des photos pour ce manufacturier"
+    },
+    {
+        "id": 287,
+        "language": "en",
+        "object_key": "select-pictures-description",
+        "page": "edit-manufacturers",
+        "resource": "Add pictures for this manufacturer"
+    },
+    {
+        "id": 288,
+        "language": "en",
+        "object_key": "select-pictures",
+        "page": "edit-manufacturers",
+        "resource": "Upload pictures"
+    },
+    {
+        "id": 104,
+        "language": "fr",
+        "object_key": "edit-home-resources",
+        "page": "admin",
+        "resource": "Modifier les resources de la page d'acceuil"
+    },
+    {
+        "id": 391,
+        "language": "fr",
+        "object_key": "something-went-wrong",
+        "page": "super",
+        "resource": "On dirait que quelque chose s'est mal passé."
+    },
+    {
+        "id": 392,
+        "language": "en",
+        "object_key": "something-went-wrong",
+        "page": "super",
+        "resource": "Looks like something went wrong."
+    },
+    {
+        "id": 88,
+        "language": "fr",
+        "object_key": "main-description-1",
+        "page": "home",
+        "resource": "Certiflo et Petro-Max sont au service de l’industrie du transport et de livraison en vrac par camions-citernes et remorques-citernes depuis 1979 et 1995 respectivement. Les sociétés se spécialisent dans la vente, la réparation et le service des citernes ainsi que des équipements de pompage, débitmètres et registres pour camions et applications industrielles. Certipropane, leur compagnie sœur, offre ses services au marché du propane. Arenco, une autre compagnie sœur, vend aux distributeurs canadiens des lumières au DEL.  "
+    },
+    {
+        "id": 91,
+        "language": "en",
+        "object_key": "main-description-1",
+        "page": "home",
+        "resource": "Certiflo and Petro-Max serve the bulk transportation and delivery industry for petroleum and other liquid products since 1979 and 1995 respectively. The companies specialize in the sale, service and repair of chassis mounted tanks and trailers and in the metering, pumping and registering equipment for trucks and industrial applications. The propane industry is served through Certipropane, Certiflo's sister company. Arenco, another sister company, supplies Canadian distributors with LED lights."
+    },
+    {
+        "id": 308,
+        "language": "en",
+        "object_key": "add",
+        "page": "common",
+        "resource": "Add"
+    },
+    {
+        "id": 389,
+        "language": "fr",
+        "object_key": "sorry",
+        "page": "super",
+        "resource": "Désole."
+    },
+    {
+        "id": 393,
+        "language": "fr",
+        "object_key": "go-back",
+        "page": "super",
+        "resource": "retourner"
+    },
+    {
+        "id": 394,
+        "language": "en",
+        "object_key": "go-back",
+        "page": "super",
+        "resource": "go back"
+    },
+    {
+        "id": 390,
+        "language": "en",
+        "object_key": "sorry",
+        "page": "super",
+        "resource": "Sorry."
+    },
+    {
+        "id": 87,
+        "language": "fr",
+        "object_key": "values",
+        "page": "home",
+        "resource": "Le groupe Certiflo valorise les relations à long terme avec ses clients, son personnel et ses fournisseurs, relations basées sur le respect, la qualité et la sécurité."
+    },
+    {
+        "id": 203,
+        "language": "fr",
+        "object_key": "telephone-mtl",
+        "page": "contact-data",
+        "resource": "514 645-4587"
+    },
+    {
+        "id": 204,
+        "language": "en",
+        "object_key": "telephone-mtl",
+        "page": "contact-data",
+        "resource": "514 645-4587"
+    },
+    {
+        "id": 205,
+        "language": "en",
+        "object_key": "telephone-no-charge-mtl",
+        "page": "contact-data",
+        "resource": "1 888 640-6858"
+    },
+    {
+        "id": 207,
+        "language": "fr",
+        "object_key": "fax-mtl",
+        "page": "contact-data",
+        "resource": "514 645-6809"
+    },
+    {
+        "id": 208,
+        "language": "en",
+        "object_key": "fax-mtl",
+        "page": "contact-data",
+        "resource": "514 645-6809"
+    },
+    {
+        "id": 210,
+        "language": "fr",
+        "object_key": "after-hours-emergency-mtl",
+        "page": "contact-data",
+        "resource": "514 910-3157"
+    },
+    {
+        "id": 213,
+        "language": "fr",
+        "object_key": "after-hours-emergency-quebec",
+        "page": "contact-data",
+        "resource": "819 475-7382 & 819 475-7469"
+    },
+    {
+        "id": 215,
+        "language": "en",
+        "object_key": "fax-quebec",
+        "page": "contact-data",
+        "resource": "819 336-2344"
+    },
+    {
+        "id": 284,
+        "language": "en",
+        "object_key": "remove-question",
+        "page": "edit-manufacturers",
+        "resource": "Are you sure you want to remove this picture?"
+    },
+    {
+        "id": 285,
+        "language": "fr",
+        "object_key": "remove-question",
+        "page": "edit-manufacturers",
+        "resource": "Êtes-vous certain de vouloir supprimer cette image?"
+    },
+    {
+        "id": 289,
+        "language": "fr",
+        "object_key": "select-pictures",
+        "page": "edit-manufacturers",
+        "resource": "Téléverser des photos"
+    },
+    {
+        "id": 313,
+        "language": "fr",
+        "object_key": "edit-achievements-resources",
+        "page": "admin",
+        "resource": "Modifier les resources de la page de realisations"
+    },
+    {
+        "id": 314,
+        "language": "en",
+        "object_key": "edit-achievements-resources",
+        "page": "admin",
+        "resource": "Edit achievements resources"
+    },
+    {
+        "id": 315,
+        "language": "fr",
+        "object_key": "description",
+        "page": "achievements",
+        "resource": "Description"
+    },
+    {
+        "id": 316,
+        "language": "en",
+        "object_key": "description",
+        "page": "achievements",
+        "resource": "Description"
+    },
+    {
+        "id": 317,
+        "language": "fr",
+        "object_key": "type",
+        "page": "achievements",
+        "resource": "Type"
+    },
+    {
+        "id": 318,
+        "language": "en",
+        "object_key": "type",
+        "page": "achievements",
+        "resource": "Type"
+    },
+    {
+        "id": 319,
+        "language": "fr",
+        "object_key": "specification",
+        "page": "achievements",
+        "resource": "Spécification"
+    },
+    {
+        "id": 320,
+        "language": "en",
+        "object_key": "specification",
+        "page": "achievements",
+        "resource": "Specification"
+    },
+    {
+        "id": 321,
+        "language": "fr",
+        "object_key": "capacity",
+        "page": "achievements",
+        "resource": "Capacité"
+    },
+    {
+        "id": 322,
+        "language": "en",
+        "object_key": "capacity",
+        "page": "achievements",
+        "resource": "Capacity"
+    },
+    {
+        "id": 323,
+        "language": "fr",
+        "object_key": "material",
+        "page": "achievements",
+        "resource": "Matériel"
+    },
+    {
+        "id": 324,
+        "language": "en",
+        "object_key": "material",
+        "page": "achievements",
+        "resource": "Material"
+    },
+    {
+        "id": 325,
+        "language": "fr",
+        "object_key": "compartments",
+        "page": "achievements",
+        "resource": "Nombre de compartiments"
+    },
+    {
+        "id": 326,
+        "language": "en",
+        "object_key": "compartments",
+        "page": "achievements",
+        "resource": "Number of compartments"
+    },
+    {
+        "id": 395,
+        "language": "fr",
+        "object_key": "uploading",
+        "page": "super",
+        "resource": "Téléchargement"
+    },
+    {
+        "id": 396,
+        "language": "en",
+        "object_key": "uploading",
+        "page": "super",
+        "resource": "Uploading"
+    },
+    {
+        "id": 397,
+        "language": "fr",
+        "object_key": "issue",
+        "page": "super",
+        "resource": " Il y a eu un problème."
+    },
+    {
+        "id": 398,
+        "language": "en",
+        "object_key": "issue",
+        "page": "super",
+        "resource": "There was an issue."
+    },
+    {
+        "id": 206,
+        "language": "fr",
+        "object_key": "telephone-no-charge-mtl",
+        "page": "contact-data",
+        "resource": "1 888 640-6858"
+    },
+    {
+        "id": 209,
+        "language": "en",
+        "object_key": "after-hours-emergency-mtl",
+        "page": "contact-data",
+        "resource": "514 910-3157"
+    },
+    {
+        "id": 211,
+        "language": "fr",
+        "object_key": "telephone-quebec",
+        "page": "contact-data",
+        "resource": "819 336-3876"
+    },
+    {
+        "id": 212,
+        "language": "fr",
+        "object_key": "fax-quebec",
+        "page": "contact-data",
+        "resource": "819 336-2344"
+    },
+    {
+        "id": 214,
+        "language": "en",
+        "object_key": "after-hours-emergency-quebec",
+        "page": "contact-data",
+        "resource": "819 475-7382 & 819 475-7469"
+    },
+    {
+        "id": 216,
+        "language": "en",
+        "object_key": "telephone-quebec",
+        "page": "contact-data",
+        "resource": "819 336-3876"
+    },
+    {
+        "id": 217,
+        "language": "en",
+        "object_key": "edit-contact-resources",
+        "page": "admin",
+        "resource": "Edit contact resources"
+    },
+    {
+        "id": 218,
+        "language": "fr",
+        "object_key": "edit-contact-resources",
+        "page": "admin",
+        "resource": "Modifier les resources de la page de contact"
+    },
+    {
+        "id": 219,
+        "language": "fr",
+        "object_key": "edit-contacts",
+        "page": "admin",
+        "resource": "Modifier les contacts"
+    },
+    {
+        "id": 220,
+        "language": "en",
+        "object_key": "edit-contacts",
+        "page": "admin",
+        "resource": "Edit contacts"
+    },
+    {
+        "id": 180,
+        "language": "fr",
+        "object_key": "general-information",
+        "page": "contact-data",
+        "resource": "certiflo@certiflo.ca"
+    },
+    {
+        "id": 290,
+        "language": "en",
+        "object_key": "manufacturers",
+        "page": "common",
+        "resource": "Manufacturers"
+    },
+    {
+        "id": 291,
+        "language": "fr",
+        "object_key": "manufacturers",
+        "page": "common",
+        "resource": "Manufacturiers"
+    },
+    {
+        "id": 292,
+        "language": "fr",
+        "object_key": "add-manufacturers",
+        "page": "edit-manufacturers",
+        "resource": "Ajouter un manufacturier"
+    },
+    {
+        "id": 293,
+        "language": "en",
+        "object_key": "add-manufacturers",
+        "page": "edit-manufacturers",
+        "resource": "Add a manufacturer"
+    },
+    {
+        "id": 77,
+        "language": "en",
+        "object_key": "mission",
+        "page": "home",
+        "resource": "Supply, assemble and maintain in optimal working condition quality equipment to assist its customers in meeting the changing industry standards."
+    },
+    {
+        "id": 225,
+        "language": "fr",
+        "object_key": "delete",
+        "page": "admin",
+        "resource": "Supprimer"
+    },
+    {
+        "id": 295,
+        "language": "fr",
+        "object_key": "cancel",
+        "page": "common",
+        "resource": "Annuler"
+    },
+    {
+        "id": 227,
+        "language": "en",
+        "object_key": "delete",
+        "page": "admin",
+        "resource": "Delete"
+    },
+    {
+        "id": 228,
+        "language": "en",
+        "object_key": "parts",
+        "page": "navigation",
+        "resource": "Parts"
+    },
+    {
+        "id": 229,
+        "language": "en",
+        "object_key": "about-us",
+        "page": "navigation",
+        "resource": "About us"
+    },
+    {
+        "id": 231,
+        "language": "en",
+        "object_key": "gallery",
+        "page": "navigation",
+        "resource": "Gallery"
+    },
+    {
+        "id": 232,
+        "language": "en",
+        "object_key": "join-us",
+        "page": "navigation",
+        "resource": "Join us"
+    },
+    {
+        "id": 233,
+        "language": "fr",
+        "object_key": "products",
+        "page": "navigation",
+        "resource": "Produits"
+    },
+    {
+        "id": 234,
+        "language": "fr",
+        "object_key": "electronic-system",
+        "page": "navigation",
+        "resource": "Système électronique"
+    },
+    {
+        "id": 235,
+        "language": "fr",
+        "object_key": "tankers",
+        "page": "navigation",
+        "resource": "Citernes"
+    },
+    {
+        "id": 236,
+        "language": "fr",
+        "object_key": "counters-registers-pumps",
+        "page": "navigation",
+        "resource": "Compteurs, registres et pompes"
+    },
+    {
+        "id": 237,
+        "language": "fr",
+        "object_key": "services",
+        "page": "navigation",
+        "resource": "Services"
+    },
+    {
+        "id": 239,
+        "language": "fr",
+        "object_key": "calibration-compteurs",
+        "page": "navigation",
+        "resource": "Calibration de compteurs"
+    },
+    {
+        "id": 240,
+        "language": "fr",
+        "object_key": "tankers-inspection",
+        "page": "navigation",
+        "resource": "Inspection de citernes"
+    },
+    {
+        "id": 241,
+        "language": "fr",
+        "object_key": "certification",
+        "page": "navigation",
+        "resource": "Certification"
+    },
+    {
+        "id": 242,
+        "language": "fr",
+        "object_key": "useful-documents",
+        "page": "navigation",
+        "resource": "Documents utiles"
+    },
+    {
+        "id": 243,
+        "language": "fr",
+        "object_key": "mission-commitment-values",
+        "page": "navigation",
+        "resource": "Mission, engagement et valeurs"
+    },
+    {
+        "id": 244,
+        "language": "fr",
+        "object_key": "realizations",
+        "page": "navigation",
+        "resource": "Réalisations"
+    },
+    {
+        "id": 245,
+        "language": "fr",
+        "object_key": "assemble-mount",
+        "page": "navigation",
+        "resource": "Assemblage / Montage"
+    },
+    {
+        "id": 246,
+        "language": "fr",
+        "object_key": "manufacturers",
+        "page": "navigation",
+        "resource": "Manufacturiers"
+    },
+    {
+        "id": 247,
+        "language": "fr",
+        "object_key": "careers",
+        "page": "navigation",
+        "resource": "Carrières"
+    },
+    {
+        "id": 248,
+        "language": "fr",
+        "object_key": "get-in",
+        "page": "contact",
+        "resource": "Contactez"
+    },
+    {
+        "id": 249,
+        "language": "fr",
+        "object_key": "touch",
+        "page": "contact",
+        "resource": "nous"
+    },
+    {
+        "id": 253,
+        "language": "fr",
+        "object_key": "opening-times",
+        "page": "contact",
+        "resource": "Heures d'ouverture"
+    },
+    {
+        "id": 254,
+        "language": "en",
+        "object_key": "monday-to-friday",
+        "page": "contact",
+        "resource": "Monday to friday"
+    },
+    {
+        "id": 255,
+        "language": "fr",
+        "object_key": "monday-to-friday",
+        "page": "contact",
+        "resource": "Lundi au vendredi"
+    },
+    {
+        "id": 256,
+        "language": "fr",
+        "object_key": "emails",
+        "page": "contact",
+        "resource": "Courriels"
+    },
+    {
+        "id": 257,
+        "language": "en",
+        "object_key": "emails",
+        "page": "contact",
+        "resource": "Emails"
+    },
+    {
+        "id": 258,
+        "language": "en",
+        "object_key": "from",
+        "page": "contact",
+        "resource": "From"
+    },
+    {
+        "id": 259,
+        "language": "fr",
+        "object_key": "from",
+        "page": "contact",
+        "resource": "De"
+    },
+    {
+        "id": 260,
+        "language": "en",
+        "object_key": "to",
+        "page": "contact",
+        "resource": "to"
+    },
+    {
+        "id": 261,
+        "language": "fr",
+        "object_key": "to",
+        "page": "contact",
+        "resource": "à"
+    },
+    {
+        "id": 252,
+        "language": "en",
+        "object_key": "opening-times",
+        "page": "contact",
+        "resource": "Opening hours"
+    },
+    {
+        "id": 238,
+        "language": "fr",
+        "object_key": "services-reparations",
+        "page": "navigation",
+        "resource": "Service et réparations"
+    },
+    {
+        "id": 230,
+        "language": "en",
+        "object_key": "current-employees",
+        "page": "navigation",
+        "resource": "Personnel"
+    },
+    {
+        "id": 251,
+        "language": "en",
+        "object_key": "get-in",
+        "page": "contact",
+        "resource": "Contact"
+    },
+    {
+        "id": 250,
+        "language": "en",
+        "object_key": "touch",
+        "page": "contact",
+        "resource": "us"
+    }
+]

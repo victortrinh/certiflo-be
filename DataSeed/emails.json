@@ -1,0 +1,109 @@
+    [{
+        "email": "pierre.lafleche@certiflo.ca",
+        "id": 2,
+        "locationId": "1",
+        "nameEn": "Service",
+        "nameFr": "Service"
+    }, {
+        "email": "certiflo@certiflo.ca",
+        "id": 1,
+        "locationId": "1",
+        "nameEn": "General information",
+        "nameFr": "Information générale"
+    }, {
+        "email": "patrick.germain@certiflo.ca",
+        "id": 12,
+        "locationId": "1",
+        "nameEn": "Sales",
+        "nameFr": "Ventes "
+    }, {
+        "email": "yves.talbot@certiflo.ca",
+        "id": 13,
+        "locationId": "1",
+        "nameEn": "Tank sales",
+        "nameFr": "Ventes de citernes"
+    }, {
+        "email": "payables@certiflo.ca",
+        "id": 14,
+        "locationId": "1",
+        "nameEn": "Payables",
+        "nameFr": "Payables"
+    }, {
+        "email": "compatibilite@certiflo.ca",
+        "id": 15,
+        "locationId": "1",
+        "nameEn": "Accounting",
+        "nameFr": "Comptabilite"
+    }, {
+        "email": "jocelyn.sirois@certiflo.ca",
+        "id": 16,
+        "locationId": "1",
+        "nameEn": "Technical service",
+        "nameFr": "Service technique"
+    }, {
+        "email": "pascal.desjardins@certiflo.ca",
+        "id": 17,
+        "locationId": "1",
+        "nameEn": "Electronic service",
+        "nameFr": "Service electronique"
+    }, {
+        "email": "acheteur-buyer@certiflo.ca",
+        "id": 18,
+        "locationId": "1",
+        "nameEn": "Purchasing",
+        "nameFr": "Achats"
+    }, {
+        "email": "expedition@certiflo.ca",
+        "id": 19,
+        "locationId": "1",
+        "nameEn": "Shipping",
+        "nameFr": "Expédition"
+    }, {
+        "email": "reception@certiflo.ca",
+        "id": 20,
+        "locationId": "1",
+        "nameEn": "Receiving",
+        "nameFr": "Reception"
+    }, {
+        "email": "payables@certiflo.ca",
+        "id": 23,
+        "locationId": "2",
+        "nameEn": "Payables",
+        "nameFr": "Payables"
+    }, {
+        "email": "comptabilite@certiflo.ca",
+        "id": 24,
+        "locationId": "2",
+        "nameEn": "Accounting",
+        "nameFr": "comptabilite"
+    }, {
+        "email": "patrick.germain@certiflo.ca",
+        "id": 25,
+        "locationId": "2",
+        "nameEn": "Sales",
+        "nameFr": "Ventes"
+    }, {
+        "email": "acheteur-buyer@certiflo.ca",
+        "id": 26,
+        "locationId": "2",
+        "nameEn": "Purchasing",
+        "nameFr": "Achats"
+    }, {
+        "email": "yves.talbot@certiflo.ca",
+        "id": 27,
+        "locationId": "2",
+        "nameEn": "Tank Sales",
+        "nameFr": "Vente de citernes"
+    }, {
+        "email": "dave.plourde@petro-max.ca",
+        "id": 22,
+        "locationId": "2",
+        "nameEn": "Technical service",
+        "nameFr": "Service technique"
+    }, {
+        "email": "martin.audet@petro-max-ca",
+        "id": 21,
+        "locationId": "2",
+        "nameEn": "Service manager",
+        "nameFr": "Gérant du service "
+    }]
