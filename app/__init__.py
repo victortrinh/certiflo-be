@@ -21,6 +21,7 @@ from .main.controller.assembly_controller import api as assembly_ns
 from .main.controller.assembly_type_controller import api as assembly_type_ns
 from .main.controller.tankerType_controller import api as tankerType_ns
 from .main.controller.tanker_controller import api as tanker_ns
+from .main.controller.job_posting_controller import api as job_posting_ns
 
 BASE_URL = '/api'
 
@@ -56,5 +57,6 @@ api.add_namespace(assembly_ns, path=BASE_URL + '/assembly')
 api.add_namespace(assembly_type_ns, path=BASE_URL + '/assemblyType')
 api.add_namespace(tankerType_ns, path=BASE_URL + "/tankerType")
 api.add_namespace(tanker_ns, path=BASE_URL + "/tanker")
+api.add_namespace(job_posting_ns, path=BASE_URL + "/jobPosting")
 
 CORS(api.blueprint)
