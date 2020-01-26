@@ -1,0 +1,40 @@
+[{
+        "capacity": "-",
+        "compartments": "-",
+        "descriptionEn": "Street Flusher",
+        "descriptionFr": "Camion citerne arroseuse",
+        "id": 2,
+        "image": "http://certiflo.ca/commun/photos/Realisations/Arroseuses/CamionEau.jpg",
+        "material": "-",
+        "projectTypeEn": "Turnkey projet",
+        "projectTypeFr": "Projet clé en main",
+        "realizationTypeId": 2,
+        "specification": "-"
+    },
+    {
+        "capacity": "X",
+        "compartments": "-",
+        "descriptionEn": "Cubes | Trailers",
+        "descriptionFr": "Cube | Remorques",
+        "id": 3,
+        "image": "http://certiflo.ca/commun/photos/Realisations/Remorques/DSC_0016.jpg",
+        "material": "X",
+        "projectTypeEn": "Turnkey projet",
+        "projectTypeFr": "Projet clé en main",
+        "realizationTypeId": 3,
+        "specification": "X"
+    },
+    {
+        "capacity": "18,500 L",
+        "compartments": "5",
+        "descriptionEn": "Bottom loading petroleum Tanker",
+        "descriptionFr": "Citerne pétrolière à chargement par le bas",
+        "id": 1,
+        "image": "http://certiflo.ca/commun/photos/Realisations/Citernes/PetroleumTanker.jpg",
+        "material": "Aluminium",
+        "projectTypeEn": "Turnkey projet",
+        "projectTypeFr": "Projet clé en main",
+        "realizationTypeId": 1,
+        "specification": "Hutchinson"
+    }
+]

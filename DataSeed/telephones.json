@@ -1,0 +1,43 @@
+[{
+        "id": 1,
+        "locationId": "1",
+        "nameEn": "Telephone",
+        "nameFr": "Téléphone",
+        "telephone": "514 645-4587"
+    },
+    {
+        "id": 2,
+        "locationId": "2",
+        "nameEn": "Telephone",
+        "nameFr": "Téléphone",
+        "telephone": "819 336-3876"
+    },
+    {
+        "id": 3,
+        "locationId": "2",
+        "nameEn": "Fax",
+        "nameFr": "Fax",
+        "telephone": "819 336-2344"
+    },
+    {
+        "id": 7,
+        "locationId": "1",
+        "nameEn": "Toll Free",
+        "nameFr": "Sans frais",
+        "telephone": "1-888-640-6858"
+    },
+    {
+        "id": 8,
+        "locationId": "1",
+        "nameEn": "Fax",
+        "nameFr": "Fax",
+        "telephone": "514-645-6809"
+    },
+    {
+        "id": 9,
+        "locationId": "2",
+        "nameEn": "Emergency Service after hours",
+        "nameFr": "Service d'urgence après les heures",
+        "telephone": "819-816-7588"
+    }
+]

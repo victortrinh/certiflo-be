@@ -1,0 +1,11 @@
+[{
+    "address": "12455 Rue April",
+    "id": 1,
+    "nameEn": "Montreal",
+    "nameFr": "Montréal"
+}, {
+    "address": "1845 Route 122",
+    "id": 2,
+    "nameEn": "Notre-Dame-du-Bon-Conseil",
+    "nameFr": "Notre-Dame-du-Bon-Conseil"
+}]

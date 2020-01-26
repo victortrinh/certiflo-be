@@ -1,0 +1,57 @@
+[{
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 19,
+        "image": "https://i.imgur.com/gd5PJeE.png",
+        "manufacturerId": 3
+    },
+    {
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 20,
+        "image": "https://i.imgur.com/1aVSIPC.png",
+        "manufacturerId": 1
+    },
+    {
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 22,
+        "image": "https://i.imgur.com/2Ok0Rjo.png",
+        "manufacturerId": 1
+    },
+    {
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 23,
+        "image": "https://i.imgur.com/28EYB1D.png",
+        "manufacturerId": 2
+    },
+    {
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 25,
+        "image": "https://i.imgur.com/0edWrLb.png",
+        "manufacturerId": 2
+    },
+    {
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 29,
+        "image": "https://i.imgur.com/hJcQAkD.png",
+        "manufacturerId": 2
+    },
+    {
+        "descriptionEn": null,
+        "descriptionFr": null,
+        "id": 37,
+        "image": "https://i.imgur.com/uQZwQQQ.gif",
+        "manufacturerId": 5
+    },
+    {
+        "descriptionEn": "Test",
+        "descriptionFr": "Test fr",
+        "id": 18,
+        "image": "https://i.imgur.com/pPcnjym.png",
+        "manufacturerId": 3
+    }
+]
