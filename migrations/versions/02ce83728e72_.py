@@ -130,6 +130,38 @@ def upgrade():
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('username')
     )
+    op.create_table('tankerTypes',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('nameEn', sa.String(length=255), nullable=True),
+    sa.Column('nameFr', sa.String(length=255), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    ) 
+    op.create_table('tankers',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('tankerTypeId', sa.Integer(), nullable=True),
+    sa.Column('unitId', sa.String(length=255), nullable=True),
+    sa.Column('nameEn', sa.String(length=255), nullable=True),
+    sa.Column('nameFr', sa.String(length=255), nullable=True),
+    sa.Column('image', sa.String(length=255), nullable=True),
+    sa.Column('kilometers', sa.Integer(), nullable=True),
+    sa.Column('engineEn', sa.String(length=255), nullable=True),
+    sa.Column('engineFr', sa.String(length=255), nullable=True),
+    sa.Column('manufacturer', sa.String(length=255), nullable=True),
+    sa.Column('year', sa.Integer(), nullable=True),
+    sa.Column('capacityInLitres', sa.Integer(), nullable=True),
+    sa.Column('capacity', sa.String(length=255), nullable=True),
+    sa.Column('material', sa.String(length=255), nullable=True),
+    sa.Column('noCompartments', sa.Integer(), nullable=True),
+    sa.Column('price', sa.String(length=255), nullable=True),
+    sa.Column('dispenser', sa.String(length=255), nullable=True),
+    sa.Column('availability', sa.String(length=255), nullable=True),
+    sa.Column('cylinderRefill', sa.String(length=255), nullable=True),
+    sa.Column('pump', sa.String(length=255), nullable=True),
+    sa.Column('additionalInformationEn', sa.Text(), nullable=True),
+    sa.Column('additionalInformationFr', sa.Text(), nullable=True),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('unitId')
+    )
     op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)
     # ### end Alembic commands ###
 
@@ -150,4 +182,6 @@ def downgrade():
     op.drop_table('employees')
     op.drop_table('emails')
     op.drop_table('blacklist_tokens')
+    op.drop_table('tankers')
+    op.drop_table('tankerTypes')
     # ### end Alembic commands ###
