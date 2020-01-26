@@ -17,6 +17,10 @@ from .main.controller.manufacturer_controller import api as manufacturer_ns
 from .main.controller.realization_controller import api as realization_ns
 from .main.controller.realization_type_controller import api as realization_type_ns
 from .main.controller.employee_controller import api as employee_ns
+from .main.controller.assembly_controller import api as assembly_ns
+from .main.controller.assembly_type_controller import api as assembly_type_ns
+from .main.controller.tankerType_controller import api as tankerType_ns
+from .main.controller.tanker_controller import api as tanker_ns
 
 BASE_URL = '/api'
 
@@ -48,5 +52,9 @@ api.add_namespace(manufacturer_ns, path=BASE_URL + "/manufacturer")
 api.add_namespace(realization_ns, path=BASE_URL + "/realization")
 api.add_namespace(realization_type_ns, path=BASE_URL + "/realizationType")
 api.add_namespace(employee_ns, path=BASE_URL + "/employee")
+api.add_namespace(assembly_ns, path=BASE_URL + '/assembly')
+api.add_namespace(assembly_type_ns, path=BASE_URL + '/assemblyType')
+api.add_namespace(tankerType_ns, path=BASE_URL + "/tankerType")
+api.add_namespace(tanker_ns, path=BASE_URL + "/tanker")
 
 CORS(api.blueprint)
