@@ -1,0 +1,16 @@
+[{
+        "id": 1,
+        "realizationTypeEn": "Tanker trucks",
+        "realizationTypeFr": "Camions citernes"
+    },
+    {
+        "id": 2,
+        "realizationTypeEn": "Street flushers",
+        "realizationTypeFr": "Arroseuses"
+    },
+    {
+        "id": 3,
+        "realizationTypeEn": "Cubes - trailers",
+        "realizationTypeFr": "Cubes - Remorques"
+    }
+]

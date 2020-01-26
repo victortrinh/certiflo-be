@@ -6,7 +6,7 @@ from app.main import db
 from app.main.model.galleryImage import GalleryImage
 
 
-def get_galleryImages(id):
+def get_galleryImages():
     galleryImages = GalleryImage.query.all()
     return jsonify(galleryImages=[galleryImage.serialize() for galleryImage in galleryImages])
 

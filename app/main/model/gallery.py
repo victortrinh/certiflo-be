@@ -2,7 +2,7 @@ from .. import db
 
 
 class Gallery(db.Model):
-    __tablename__ = "gallery"
+    __tablename__ = "galleries"
 
     id = db.Column(db.Integer, primary_key=True)
     company = db.Column(db.String(255), unique=False)
@@ -13,5 +13,5 @@ class Gallery(db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'image': self.image
+            'company': self.company
         }

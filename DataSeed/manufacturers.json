@@ -1,0 +1,21 @@
+[{
+        "id": 2,
+        "nameEn": "Meters",
+        "nameFr": "Compteurs"
+    },
+    {
+        "id": 3,
+        "nameEn": "Hose reels",
+        "nameFr": "Dévidoirs"
+    },
+    {
+        "id": 5,
+        "nameEn": "Pumps",
+        "nameFr": "Pompes"
+    },
+    {
+        "id": 1,
+        "nameEn": "Hoses",
+        "nameFr": "Boyaux"
+    }
+]

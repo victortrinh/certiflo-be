@@ -10,7 +10,7 @@ api = GalleryImageDTO.api
 class GetGalleryImages(Resource):
     @api.doc('Get galleries')
     def get(self):
-        return get_gallery_Images()
+        return get_galleryImages()
 
 
 @api.route('/save')
