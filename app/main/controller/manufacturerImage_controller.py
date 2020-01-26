@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.manufacturerImage_service import get_all_manufacturer_images, save_new_manufacturer_image, delete_manufacturer_image
+from ..service.manufacturerImage_service import get_all_manufacturer_images, save_new_manufacturer_image, delete_manufacturer_image, update_manufacturer_image
 from ..dto.manufacturerImage_dto import ManufacturerImageDTO
 
 
@@ -21,6 +21,14 @@ class SaveManufacturerImage(Resource):
     def post(self):
         data = request.json
         return save_new_manufacturer_image(data)
+
+@api.route('/update')
+class UpdateManufacturerImage(Resource):
+    @api.doc('Update manufacturer image')
+    @api.expect(ManufacturerImageDTO.manufacturerImage, validate=True)
+    def put(self):
+        data = request.json
+        return update_manufacturer_image(data)
 
 
 @api.route('/delete')
