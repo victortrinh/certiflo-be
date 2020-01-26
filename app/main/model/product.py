@@ -8,8 +8,8 @@ class Product(db.Model):
     image = db.Column(db.String(255), unique=False)
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)
-    descriptionEn = db.Column(db.String(255), unique=False)
-    descriptionFr = db.Column(db.String(255), unique=False)
+    descriptionEn = db.Column(db.Text, unique=False)
+    descriptionFr = db.Column(db.Text, unique=False)
 
     def __repr__(self):
         return '<Product {}>'.format(self.nameEn)
