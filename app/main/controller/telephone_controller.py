@@ -2,6 +2,8 @@ from flask_restplus import Resource
 from flask import request
 from ..service.telephone_service import get_telephones, save_new_telephone, update_telephone, delete_telephone
 from ..dto.telephone_dto import TelephoneDTO
+from ..service.auth_service import Auth
+from flask_httpauth import HTTPTokenAuth
 
 
 api = TelephoneDTO.api
@@ -9,6 +11,8 @@ api = TelephoneDTO.api
 
 @api.route('/getAll')
 class GetTelephones(Resource):
+    @Auth.auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Get all telephones')
     def get(self):
         return get_telephones()
