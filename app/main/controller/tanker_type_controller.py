@@ -1,7 +1,7 @@
 from flask_restplus import Resource
 from flask import request
 from ..service.tankerType_service import get_tankerTypes, save_new_tankerType, update_tankerType, delete_tankerType
-from ..dto.tankerType_dto import TankerTypeDTO
+from ..dto.tanker_type_dto import TankerTypeDTO
 
 api = TankerTypeDTO.api
 
