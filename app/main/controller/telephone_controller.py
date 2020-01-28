@@ -7,12 +7,11 @@ from flask_httpauth import HTTPTokenAuth
 
 
 api = TelephoneDTO.api
+auth = Auth.auth
 
 
 @api.route('/getAll')
 class GetTelephones(Resource):
-    @Auth.auth.login_required
-    @api.doc(security='Bearer')
     @api.doc('Get all telephones')
     def get(self):
         return get_telephones()
@@ -20,6 +19,8 @@ class GetTelephones(Resource):
 
 @api.route('/save')
 class SaveTelephone(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Save new telephone')
     @api.expect(TelephoneDTO.telephone, validate=True)
     def post(self):
@@ -29,6 +30,8 @@ class SaveTelephone(Resource):
 
 @api.route('/update')
 class UpdateTelephone(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Update the telephone')
     @api.expect(TelephoneDTO.full_telephone, validate=True)
     def put(self):
@@ -38,6 +41,8 @@ class UpdateTelephone(Resource):
 
 @api.route('/delete')
 class DeleteTelephone(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Delete telephone')
     @api.expect(TelephoneDTO.telephone_id, validate=True)
     def delete(self):

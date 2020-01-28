@@ -64,6 +64,14 @@ For noob developers using terminal under windows,
 
 Note that the 2020 backlog includes upsert puts, which will allow to create resources with provided ids
 
+# Authentication
+
+The application uses token based authentication using the HTTP bearer authentication scheme.
+Each Create/Update/Delete request must be authenticated. The obtain an authentication token using credentials, use the Authentication endpoint (login).
+To test the authentication using swagger, obtain a token and use the Authorize button on top. For the `Bearer (apiKey)` value, enter `Bearer [your token]`.
+To disable the authentication **FOR DEBBUGING PURPOSE ONLY**, set the `DISABLE_AUTHENTICATION` setting to `True` in config.py.
+
+
 # Branch naming
 
 | Instance        | Branch                                             | Description, Instructions, Notes                   |

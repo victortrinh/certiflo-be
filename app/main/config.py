@@ -13,6 +13,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'postgres://postgres:postgres@localhost:5432/certiflo'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DISABLE_AUTHENTICATION = False
 
 
 class TestingConfig(Config):
