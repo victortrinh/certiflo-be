@@ -1,9 +1,9 @@
 from flask_restplus import Resource
 from flask import request
 from ..service.tankerType_service import get_tankerTypes, save_new_tankerType, update_tankerType, delete_tankerType
-from ..dto.tankerType_dto import TankerTypeDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
+from ..dto.tanker_type_dto import TankerTypeDTO
 
 api = TankerTypeDTO.api
 auth = Auth.auth

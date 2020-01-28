@@ -1,12 +1,14 @@
 from flask_restplus import Resource
 from flask import request
 from ..service.manufacturerImage_service import get_all_manufacturer_images, save_new_manufacturer_image, delete_manufacturer_image, update_manufacturer_image
-from ..dto.manufacturerImage_dto import ManufacturerImageDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
+from ..dto.manufacturer_image_dto import ManufacturerImageDTO
+
 
 api = ManufacturerImageDTO.api
 auth = Auth.auth
+
 
 @api.route('/all')
 class ManufacturerImage(Resource):
