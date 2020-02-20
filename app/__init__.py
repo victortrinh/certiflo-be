@@ -32,7 +32,14 @@ blueprint = Blueprint('api', __name__)
 api = Api(blueprint,
           title='Certiflo',
           version='1.0',
-          description='All servicing for certiflo'
+          description='All servicing for certiflo',
+          authorizations={
+              'Bearer': {
+                  'type': 'apiKey',
+                  'in': 'header',
+                  'name': 'Authorization'
+              }
+          }
           )
 
 api.blueprint.after_request

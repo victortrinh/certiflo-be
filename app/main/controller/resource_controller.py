@@ -2,8 +2,11 @@ from flask_restplus import Resource, Namespace
 from flask import request
 from ..service.resources_service import get_all_resources, get_resources_by_page_and_language, save_new_resource, update_resource, get_resources_by_language, delete_resource, update_resource_by_id_and_language
 from ..dto.resources_dto import ResourceDTO
+from ..service.auth_service import Auth
+from flask_httpauth import HTTPTokenAuth
 
 api = ResourceDTO.api
+auth = Auth.auth
 
 
 @api.route('/all')
@@ -29,6 +32,8 @@ class GetResourceByPageAndLanguage(Resource):
 
 @api.route('/update')
 class UpdateResource(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Update the resource')
     @api.expect(ResourceDTO.resource, validate=True)
     def put(self):
@@ -38,6 +43,8 @@ class UpdateResource(Resource):
 
 @api.route('/updateById')
 class UpdateResource(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Update the resource by id')
     @api.expect(ResourceDTO.resource_id_language, validate=True)
     def put(self):
@@ -47,6 +54,8 @@ class UpdateResource(Resource):
 
 @api.route('/save')
 class SaveResource(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Save new resource')
     @api.expect(ResourceDTO.resource, validate=True)
     def post(self):
@@ -56,6 +65,8 @@ class SaveResource(Resource):
 
 @api.route('/delete')
 class DeleteResource(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Delete resource')
     @api.expect(ResourceDTO.resource_id, validate=True)
     def delete(self):
