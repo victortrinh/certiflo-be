@@ -2,9 +2,11 @@ from flask_restplus import Resource
 from flask import request
 from ..service.employee_service import get_employees, save_new_employee, update_employee, delete_employee
 from ..dto.employee_dto import EmployeeDTO
-
+from ..service.auth_service import Auth
+from flask_httpauth import HTTPTokenAuth
 
 api = EmployeeDTO.api
+auth = Auth.auth
 
 
 @api.route('/getAll')
@@ -16,6 +18,8 @@ class GetEmployees(Resource):
 
 @api.route('/save')
 class SaveEmployee(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Save new employee')
     @api.expect(EmployeeDTO.employee, validate=True)
     def post(self):
@@ -25,6 +29,8 @@ class SaveEmployee(Resource):
 
 @api.route('/update')
 class UpdateEmployee(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Update an employee')
     @api.expect(EmployeeDTO.full_employee, validate=True)
     def put(self):
@@ -34,6 +40,8 @@ class UpdateEmployee(Resource):
 
 @api.route('/delete')
 class DeleteEmployee(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
     @api.doc('Delete employee')
     @api.expect(EmployeeDTO.employee_id, validate=True)
     def delete(self):
