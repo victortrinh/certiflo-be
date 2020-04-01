@@ -21,7 +21,8 @@ def save_new_employee(data):
         company=data['company'],
         image=data['image'],
         descriptionFr=data['descriptionFr'],
-        descriptionEn=data['descriptionEn']
+        descriptionEn=data['descriptionEn'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_employee)
     response_object = {
@@ -43,6 +44,7 @@ def update_employee(data):
     record.image = data["image"]
     record.descriptionFr = data["descriptionFr"]
     record.descriptionEn = data["descriptionEn"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

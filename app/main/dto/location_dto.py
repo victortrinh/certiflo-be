@@ -6,7 +6,8 @@ class LocationDTO:
     location = api.model('location', {
         'nameEn': fields.String(required=True, description='location name in french'),
         'nameFr': fields.String(required=True, description='location name in english'),
-        'address': fields.String(required=True, description='location address')
+        'address': fields.String(required=True, description='location address'),
+        'displayOrder': fields.String(required=True, description='Display Order')
     })
     location_id = api.model('Location id', {
         'id': fields.Integer(required=True, description='The location id'),

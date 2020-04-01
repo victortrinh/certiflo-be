@@ -8,6 +8,7 @@ class Location(db.Model):
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)
     address = db.Column(db.String(255), unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Location {}>'.format(self.name)
@@ -17,5 +18,6 @@ class Location(db.Model):
             'id': self.id,
             'nameEn': self.nameEn,
             'nameFr': self.nameFr,
-            'address': self.address
+            'address': self.address,
+            'displayOrder': self.displayOrder
         }

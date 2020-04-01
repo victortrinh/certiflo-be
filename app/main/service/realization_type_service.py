@@ -14,7 +14,8 @@ def get_realization_types():
 def save_new_realization_type(data):
     new_realization_type = RealizationType(
         realizationTypeFr=data['realizationTypeFr'],
-        realizationTypeEn=data['realizationTypeEn']
+        realizationTypeEn=data['realizationTypeEn'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_realization_type)
     response_object = {
@@ -29,6 +30,7 @@ def update_realization_type(data):
     record = query.one()
     record.realizationTypeEn = data["realizationTypeEn"]
     record.realizationTypeFr = data["realizationTypeFr"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

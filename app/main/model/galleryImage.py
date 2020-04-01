@@ -7,6 +7,7 @@ class GalleryImage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     galleryId = db.Column(db.Integer, unique=False)
     image = db.Column(db.Text, unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<GalleryImage {}>'.format(self.nameEn)
@@ -15,5 +16,6 @@ class GalleryImage(db.Model):
         return {
             'id': self.id,
             'image': self.image,
-            'galleryId': self.galleryId
+            'galleryId': self.galleryId,
+            'displayOrder': self.displayOrder
         }

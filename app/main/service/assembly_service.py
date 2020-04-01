@@ -18,6 +18,7 @@ def save_new_assembly(data):
         nameEn=data['nameEn'],
         descriptionFr=data['descriptionFr'],
         descriptionEn=data['descriptionEn'],
+        displayOrder=data['displayOrder'],
         image=data['image']
     )
     save_changes(new_assembly)
@@ -36,6 +37,7 @@ def update_assembly(data):
     record.nameEn = data["nameEn"]
     record.descriptionFr = data["descriptionFr"]
     record.descriptionEn = data["descriptionEn"]
+    record.displayOrder = data["displayOrder"]
     record.image = data["image"]
     db.session.flush()
     db.session.commit()

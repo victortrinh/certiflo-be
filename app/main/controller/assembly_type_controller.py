@@ -9,7 +9,7 @@ api = AssemblyTypeDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetAssemblyTypes(Resource):
     @api.doc('Get assembly types')
     def get(self):

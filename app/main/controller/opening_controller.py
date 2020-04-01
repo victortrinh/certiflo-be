@@ -9,7 +9,7 @@ api = OpeningDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetOpenings(Resource):
     @api.doc('Get openings')
     def get(self):

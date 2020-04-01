@@ -14,7 +14,8 @@ def get_all_manufacturer_images():
 def save_new_manufacturer_image(data):
     new_manufacturer_image = ManufacturerImage(
         manufacturerId=data['manufacturerId'],
-        image=data['image']
+        image=data['image'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_manufacturer_image)
     response_object = {
@@ -31,6 +32,7 @@ def update_manufacturer_image(data):
     record.manufacturerId = data["manufacturerId"]
     record.descriptionEn = data["descriptionEn"]
     record.descriptionFr = data["descriptionFr"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

@@ -15,7 +15,8 @@ def save_new_location(data):
     new_location = Location(
         nameEn=data['nameEn'],
         nameFr=data['nameFr'],
-        address=data['address']
+        address=data['address'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_location)
 
@@ -27,6 +28,7 @@ def update_location(data):
     record.address = data["address"]
     record.nameEn = data["nameEn"]
     record.nameFr = data["nameFr"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

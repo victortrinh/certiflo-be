@@ -9,7 +9,7 @@ api = AssemblyDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetAssemblies(Resource):
     @api.doc('Get assemblies')
     def get(self):

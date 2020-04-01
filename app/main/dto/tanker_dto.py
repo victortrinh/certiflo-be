@@ -24,7 +24,8 @@ class TankerDTO:
         'cylinderRefill': fields.String(required=False, description='Tank cylinderRefill'),
         'pump': fields.String(required=False, description='Tank pump'),
         'additionalInformationEn': fields.String(required=False, description='Tank additional information in english'),
-        'additionalInformationFr': fields.String(required=False, description='Tank additional information in french')
+        'additionalInformationFr': fields.String(required=False, description='Tank additional information in french'),
+        'displayOrder': fields.String(required=True, description='Display Order')
     })
     full_tanker = api.model('Full tanker', {
         'id': fields.Integer(required=True, description='The tanker id'),
@@ -47,9 +48,8 @@ class TankerDTO:
         'cylinderRefill': fields.String(required=False, description='Tank cylinderRefill'),
         'pump': fields.String(required=False, description='Tank pump'),
         'additionalInformationEn': fields.String(required=False, description='Tank additional information in english'),
-        'additionalInformationFr': fields.String(required=False, description='Tank additional information in french')
-
-
+        'additionalInformationFr': fields.String(required=False, description='Tank additional information in french'),
+        'displayOrder': fields.String(required=True, description='Display Order')
     })
     tanker_id = api.model('Tanker id', {
         'id': fields.Integer(required=True, description='The Tanker id'),

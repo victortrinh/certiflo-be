@@ -8,7 +8,8 @@ class OpeningDTO:
         'nameEn': fields.String(required=True, description='Opening name in french'),
         'nameFr': fields.String(required=True, description='Opening name in english'),
         'opening': fields.String(required=True, description='Opening'),
-        'closing': fields.String(required=True, description='Closing')
+        'closing': fields.String(required=True, description='Closing'),
+        'displayOrder': fields.String(required=True, description='Display Order')
     })
     full_opening = api.model('Full opening', {
         'id': fields.Integer(required=True, description='The opening id'),
@@ -16,7 +17,8 @@ class OpeningDTO:
         'nameEn': fields.String(required=True, description='Opening name in french'),
         'nameFr': fields.String(required=True, description='Opening name in english'),
         'opening': fields.String(required=True, description='Opening'),
-        'closing': fields.String(required=True, description='Closing')
+        'closing': fields.String(required=True, description='Closing'),
+        'displayOrder': fields.String(required=True, description='Display Order')
     })
     opening_id = api.model('Opening id', {
         'id': fields.Integer(required=True, description='The Opening id'),

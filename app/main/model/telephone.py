@@ -9,6 +9,7 @@ class Telephone(db.Model):
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)
     telephone = db.Column(db.String(255), unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Telephone {}>'.format(self.nameEn)
@@ -19,5 +20,6 @@ class Telephone(db.Model):
             'locationId': self.locationId,
             'nameEn': self.nameEn,
             'nameFr': self.nameFr,
-            'telephone': self.telephone
+            'telephone': self.telephone,
+            'displayOrder': self.displayOrder
         }

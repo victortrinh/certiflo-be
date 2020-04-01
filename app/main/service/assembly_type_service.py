@@ -15,6 +15,7 @@ def save_new_assembly_type(data):
     new_assemblyType = AssemblyType(
         nameFr=data['nameFr'],
         nameEn=data['nameEn'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_assemblyType)
     response_object = {
@@ -30,6 +31,7 @@ def update_assembly_type(data):
     record.id = data["id"]
     record.nameFr = data["nameFr"]
     record.nameEn = data["nameEn"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

@@ -6,7 +6,7 @@ from ..dto.job_posting_dto import JobPostingDTO
 api = JobPostingDTO.api
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetJobPostings(Resource):
     @api.doc('Get job postings')
     def get(self):

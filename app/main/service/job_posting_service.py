@@ -21,7 +21,8 @@ def save_new_job_posting(data):
         companyDescriptionEn=data['companyDescriptionEn'],
         jobDescriptionFr=data['jobDescriptionFr'],
         jobDescriptionEn=data['jobDescriptionEn'],
-        locationId=data['locationId']
+        locationId=data['locationId'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_job_posting)
     response_object = {
@@ -42,6 +43,7 @@ def update_job_posting(data):
     record.companyDescriptionEn = data["companyDescriptionEn"]
     record.jobDescriptionFr = data["jobDescriptionFr"]
     record.jobDescriptionEn = data["jobDescriptionEn"]
+    record.displayOrder = data["displayOrder"]
     record.locationId = data["locationId"]
     db.session.flush()
     db.session.commit()

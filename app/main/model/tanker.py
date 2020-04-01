@@ -26,6 +26,7 @@ class Tanker(db.Model):
     pump = db.Column(db.String(255), unique=False)
     additionalInformationEn = db.Column(db.Text, unique=False)
     additionalInformationFr = db.Column(db.Text, unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Tanker {}>'.format(self.unitId)
@@ -53,5 +54,6 @@ class Tanker(db.Model):
             'cylinderRefill': self.cylinderRefill,
             'pump': self.pump,
             'additionalInformationFr': self.additionalInformationFr,
-            'additionalInformationEn': self.additionalInformationEn
+            'additionalInformationEn': self.additionalInformationEn,
+            'displayOrder': self.displayOrder
         }

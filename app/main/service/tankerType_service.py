@@ -14,7 +14,8 @@ def get_tankerTypes():
 def save_new_tankerType(data):
     new_tankerType = TankerType(
         nameEn=data['nameEn'],
-        nameFr=data['nameFr']
+        nameFr=data['nameFr'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_tankerType)
     response_object = {
@@ -29,6 +30,7 @@ def update_tankerType(data):
     record = query.one()
     record.nameEn = data["nameEn"]
     record.nameFr = data["nameFr"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

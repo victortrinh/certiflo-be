@@ -10,7 +10,7 @@ api = TelephoneDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetTelephones(Resource):
     @api.doc('Get all telephones')
     def get(self):

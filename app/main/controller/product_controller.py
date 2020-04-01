@@ -9,7 +9,7 @@ api = ProductDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetProducts(Resource):
     @api.doc('Get products')
     def get(self):

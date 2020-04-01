@@ -7,6 +7,7 @@ class RealizationType(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     realizationTypeEn = db.Column(db.String(255), unique=False)
     realizationTypeFr = db.Column(db.String(255), unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<RealizationType {}>'.format(self.realisationTypeEn)
@@ -15,5 +16,6 @@ class RealizationType(db.Model):
         return {
             'id': self.id,
             'realizationTypeEn': self.realizationTypeEn,
-            'realizationTypeFr': self.realizationTypeFr
+            'realizationTypeFr': self.realizationTypeFr,
+            'displayOrder': self.displayOrder
         }

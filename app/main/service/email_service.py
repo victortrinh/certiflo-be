@@ -16,7 +16,8 @@ def save_new_email(data):
         locationId=data['locationId'],
         nameEn=data['nameEn'],
         nameFr=data['nameFr'],
-        email=data['email']
+        email=data['email'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_email)
     response_object = {
@@ -32,6 +33,7 @@ def update_email(data):
     record.email = data["email"]
     record.nameEn = data["nameEn"]
     record.nameFr = data["nameFr"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

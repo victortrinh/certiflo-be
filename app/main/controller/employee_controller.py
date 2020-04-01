@@ -9,7 +9,7 @@ api = EmployeeDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetEmployees(Resource):
     @api.doc('Get all employees')
     def get(self):

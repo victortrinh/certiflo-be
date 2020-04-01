@@ -22,7 +22,8 @@ def save_new_realization(data):
         specification=data['specification'],
         capacity=data['capacity'],
         material=data['material'],
-        compartments=data['compartments']
+        compartments=data['compartments'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_realization)
     response_object = {
@@ -42,6 +43,7 @@ def update_realization(data):
     record.projectTypeFr = data["projectTypeFr"]
     record.projectTypeEn = data["projectTypeEn"]
     record.specification = data["specification"]
+    record.displayOrder = data["displayOrder"]
     record.capacity = data["capacity"]
     record.material = data["material"]
     record.compartments = data["compartments"]

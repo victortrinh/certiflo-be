@@ -32,7 +32,8 @@ def save_new_tanker(data):
         cylinderRefill=data['cylinderRefill'],
         pump=data['pump'],
         additionalInformationEn=data['additionalInformationEn'],
-        additionalInformationFr=data['additionalInformationFr']
+        additionalInformationFr=data['additionalInformationFr'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_tanker)
     response_object = {
@@ -55,6 +56,7 @@ def update_tanker(data):
     record.manufacturer = data['manufacturer']
     record.year = data['year']
     record.capacityInLitres = data['capacityInLitres']
+    record.displayOrder = data["displayOrder"]
     record.capacity = data['capacity']
     record.material = data['material']
     record.noCompartments = data['noCompartments']
