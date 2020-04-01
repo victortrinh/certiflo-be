@@ -13,7 +13,8 @@ def get_galleries():
 
 def save_new_gallery(data):
     new_gallery = Gallery(
-        company=data['company']
+        company=data['company'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_gallery)
     response_object = {
@@ -27,6 +28,7 @@ def update_gallery(data):
     query = query.filter(Gallery.id == data['id'])
     record = query.one()
     record.company = data["company"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

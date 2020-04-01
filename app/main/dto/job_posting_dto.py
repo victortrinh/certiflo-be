@@ -13,6 +13,7 @@ class JobPostingDTO:
         'jobDescriptionFr': fields.String(required=True, description='Job description in french'),
         'jobDescriptionEn': fields.String(required=True, description='Job description in english'),
         'locationId': fields.Integer(required=True, description='Location'),
+        'displayOrder': fields.Integer(required=False, description='Display Order')
     })
     full_job_posting = api.model('Full Job Posting', {
         'id': fields.Integer(required=True, description='Id'),
@@ -25,6 +26,7 @@ class JobPostingDTO:
         'jobDescriptionFr': fields.String(required=True, description='Job description in french'),
         'jobDescriptionEn': fields.String(required=True, description='Job description in english'),
         'locationId': fields.Integer(required=True, description='Location'),
+        'displayOrder': fields.Integer(required=False, description='Display Order')
     })
     job_posting_id = api.model('Job Posting id', {
         'id': fields.Integer(required=True, description='The id'),

@@ -10,6 +10,7 @@ class Opening(db.Model):
     nameFr = db.Column(db.String(255), unique=False)
     opening = db.Column(db.String(255), unique=False)
     closing = db.Column(db.String(255), unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Opening {}>'.format(self.nameEn)
@@ -21,5 +22,6 @@ class Opening(db.Model):
             'nameEn': self.nameEn,
             'nameFr': self.nameFr,
             'opening': self.opening,
-            'closing': self.closing
+            'closing': self.closing,
+            'displayOrder': self.displayOrder
         }

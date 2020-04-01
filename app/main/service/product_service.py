@@ -17,7 +17,8 @@ def save_new_product(data):
         nameFr=data['nameFr'],
         descriptionEn=data['descriptionEn'],
         descriptionFr=data['descriptionFr'],
-        image=data['image']
+        image=data['image'],
+        displayOrder=data['displayOrder']
     )
     save_changes(new_product)
     response_object = {
@@ -35,6 +36,7 @@ def update_product(data):
     record.nameFr = data["nameFr"]
     record.descriptionEn = data["descriptionEn"]
     record.descriptionFr = data["descriptionFr"]
+    record.displayOrder = data["displayOrder"]
     db.session.flush()
     db.session.commit()
     response_object = {

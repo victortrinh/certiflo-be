@@ -14,6 +14,7 @@ class JobPosting(db.Model):
     jobDescriptionFr = db.Column(db.Text, unique=False)
     jobDescriptionEn = db.Column(db.Text, unique=False)
     locationId = db.Column(db.Integer, unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Job postings {}>'.format(self.jobTitleEn)
@@ -29,5 +30,6 @@ class JobPosting(db.Model):
             'companyDescriptionEn': self.companyDescriptionEn,
             'jobDescriptionFr': self.jobDescriptionFr,
             'jobDescriptionEn': self.jobDescriptionEn,
-            'locationId': self.locationId
+            'locationId': self.locationId,
+            'displayOrder': self.displayOrder
         }

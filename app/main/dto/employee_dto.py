@@ -12,7 +12,8 @@ class EmployeeDTO:
         'company': fields.String(required=True, description='Company'),
         'image': fields.String(required=True, description='Photo'),
         'descriptionFr': fields.String(required=True, description='Description in french'),
-        'descriptionEn': fields.String(required=True, description='Description in english')
+        'descriptionEn': fields.String(required=True, description='Description in english'),
+        'displayOrder': fields.Integer(required=False, description='Display Order')
     })
     full_employee = api.model('Full employee', {
         'id': fields.Integer(required=True, description='Id'),
@@ -24,7 +25,8 @@ class EmployeeDTO:
         'company': fields.String(required=True, description='Company'),
         'image': fields.String(required=True, description='Photo'),
         'descriptionFr': fields.String(required=True, description='Description in french'),
-        'descriptionEn': fields.String(required=True, description='Description in english')
+        'descriptionEn': fields.String(required=True, description='Description in english'),
+        'displayOrder': fields.Integer(required=False, description='Display Order')
     })
     employee_id = api.model('Employee id', {
         'id': fields.Integer(required=True, description='The id'),

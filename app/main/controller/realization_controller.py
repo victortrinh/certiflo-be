@@ -9,7 +9,7 @@ api = RealizationDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetRealizations(Resource):
     @api.doc('Get all realizations')
     def get(self):

@@ -9,7 +9,7 @@ api = EmailDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetEmailsByLocationId(Resource):
     @api.doc('Get emails')
     def get(self):

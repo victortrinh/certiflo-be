@@ -9,7 +9,7 @@ api = TankerDTO.api
 auth = Auth.auth
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetTankers(Resource):
     @api.doc('Get tankers')
     def get(self):

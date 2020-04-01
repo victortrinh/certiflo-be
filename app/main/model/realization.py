@@ -15,6 +15,7 @@ class Realization(db.Model):
     capacity = db.Column(db.String(255), unique=False)
     material = db.Column(db.String(255), unique=False)
     compartments = db.Column(db.String(255), unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Realization {}>'.format(self.specification)
@@ -31,5 +32,6 @@ class Realization(db.Model):
             'specification': self.specification,
             'capacity': self.capacity,
             'material': self.material,
-            'compartments': self.compartments
+            'compartments': self.compartments,
+            'displayOrder': self.displayOrder
         }

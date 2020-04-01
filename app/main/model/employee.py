@@ -14,6 +14,7 @@ class Employee(db.Model):
     image = db.Column(db.String(255), unique=False)
     descriptionEn = db.Column(db.Text, unique=False)
     descriptionFr = db.Column(db.Text, unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Employee {}>'.format(self.description)
@@ -29,5 +30,6 @@ class Employee(db.Model):
             'company': self.company,
             'image': self.image,
             'descriptionEn': self.descriptionEn,
-            'descriptionFr': self.descriptionFr
+            'descriptionFr': self.descriptionFr,
+            'displayOrder': self.displayOrder
         }

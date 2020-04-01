@@ -14,11 +14,11 @@ class Tanker(db.Model):
     engineEn = db.Column(db.String(255), unique=False)
     engineFr = db.Column(db.String(255), unique=False)
     manufacturer = db.Column(db.String(255), unique=False)
-    year = db.Column(db.Integer, unique=False)
-    capacityInLitres = db.Column(db.Integer, unique=False)
+    year = db.Column(db.String, unique=False)
+    capacityInLitres = db.Column(db.String, unique=False)
     capacity = db.Column(db.String(255), unique=False)
     material = db.Column(db.String(255), unique=False)
-    noCompartments = db.Column(db.Integer, unique=False)
+    noCompartments = db.Column(db.String, unique=False)
     price = db.Column(db.String(255), unique=False)
     dispenser = db.Column(db.String(255), unique=False)
     availability = db.Column(db.String(255), unique=False)
@@ -26,6 +26,7 @@ class Tanker(db.Model):
     pump = db.Column(db.String(255), unique=False)
     additionalInformationEn = db.Column(db.Text, unique=False)
     additionalInformationFr = db.Column(db.Text, unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Tanker {}>'.format(self.unitId)
@@ -53,5 +54,6 @@ class Tanker(db.Model):
             'cylinderRefill': self.cylinderRefill,
             'pump': self.pump,
             'additionalInformationFr': self.additionalInformationFr,
-            'additionalInformationEn': self.additionalInformationEn
+            'additionalInformationEn': self.additionalInformationEn,
+            'displayOrder': self.displayOrder
         }

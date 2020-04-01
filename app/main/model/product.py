@@ -10,6 +10,7 @@ class Product(db.Model):
     nameFr = db.Column(db.String(255), unique=False)
     descriptionEn = db.Column(db.Text, unique=False)
     descriptionFr = db.Column(db.Text, unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Product {}>'.format(self.nameEn)
@@ -21,5 +22,6 @@ class Product(db.Model):
             'nameEn': self.nameEn,
             'nameFr': self.nameFr,
             'descriptionEn': self.descriptionEn,
-            'descriptionFr': self.descriptionFr
+            'descriptionFr': self.descriptionFr,
+            'displayOrder': self.displayOrder
         }

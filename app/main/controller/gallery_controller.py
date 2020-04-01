@@ -6,7 +6,7 @@ from ..dto.gallery_dto import GalleryDTO
 api = GalleryDTO.api
 
 
-@api.route('/getAll')
+@api.route('/all')
 class GetGalleries(Resource):
     @api.doc('Get galleries')
     def get(self):

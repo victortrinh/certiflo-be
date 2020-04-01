@@ -6,6 +6,7 @@ class Gallery(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     company = db.Column(db.String(255), unique=False)
+    displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):
         return '<Gallery {}>'.format(self.nameEn)
@@ -13,5 +14,6 @@ class Gallery(db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'company': self.company
+            'company': self.company,
+            'displayOrder': self.displayOrder
         }
