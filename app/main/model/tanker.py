@@ -27,6 +27,8 @@ class Tanker(db.Model):
     additionalInformationEn = db.Column(db.Text, unique=False)
     additionalInformationFr = db.Column(db.Text, unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    isCertipropane = db.Column(
+        db.Boolean, server_default='f', default=False, nullable=True)
 
     def __repr__(self):
         return '<Tanker {}>'.format(self.unitId)
@@ -55,5 +57,6 @@ class Tanker(db.Model):
             'pump': self.pump,
             'additionalInformationFr': self.additionalInformationFr,
             'additionalInformationEn': self.additionalInformationEn,
-            'displayOrder': self.displayOrder
+            'displayOrder': self.displayOrder,
+            'isCertipropane': self.isCertipropane
         }

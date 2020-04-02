@@ -9,7 +9,8 @@ class OpeningDTO:
         'nameFr': fields.String(required=True, description='Opening name in english'),
         'opening': fields.String(required=True, description='Opening'),
         'closing': fields.String(required=True, description='Closing'),
-        'displayOrder': fields.Integer(required=False, description='Display Order')
+        'displayOrder': fields.Integer(required=False, description='Display Order'),
+        'isCertipropane': fields.Boolean(required=False, description='Is Certipropane')
     })
     full_opening = api.model('Full opening', {
         'id': fields.Integer(required=True, description='The opening id'),
@@ -18,7 +19,8 @@ class OpeningDTO:
         'nameFr': fields.String(required=True, description='Opening name in english'),
         'opening': fields.String(required=True, description='Opening'),
         'closing': fields.String(required=True, description='Closing'),
-        'displayOrder': fields.Integer(required=False, description='Display Order')
+        'displayOrder': fields.Integer(required=False, description='Display Order'),
+        'isCertipropane': fields.Boolean(required=False, description='Is Certipropane')
     })
     opening_id = api.model('Opening id', {
         'id': fields.Integer(required=True, description='The Opening id'),

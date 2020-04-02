@@ -15,7 +15,8 @@ def save_new_galleryImage(data):
     new_galleryImage = GalleryImage(
         image=data['image'],
         galleryId=data['galleryId'],
-        displayOrder=data['displayOrder']
+        displayOrder=data['displayOrder'],
+        isCertipropane=data['isCertipropane']
     )
     save_changes(new_galleryImage)
     response_object = {
@@ -31,6 +32,7 @@ def update_galleryImage(data):
     record.galleryId = data["galleryId"]
     record.image = data["image"]
     record.displayOrder = data["displayOrder"]
+    record.isCertipropane = data["isCertipropane"]
     db.session.flush()
     db.session.commit()
     response_object = {

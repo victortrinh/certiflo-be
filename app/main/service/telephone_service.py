@@ -17,7 +17,8 @@ def save_new_telephone(data):
         nameEn=data['nameEn'],
         nameFr=data['nameFr'],
         telephone=data['telephone'],
-        displayOrder=data['displayOrder']
+        displayOrder=data['displayOrder'],
+        isCertipropane=data['isCertipropane']
     )
     save_changes(new_telephone)
     response_object = {
@@ -34,6 +35,7 @@ def update_telephone(data):
     record.nameEn = data["nameEn"]
     record.nameFr = data["nameFr"]
     record.displayOrder = data["displayOrder"]
+    record.isCertipropane = data["isCertipropane"]
     db.session.flush()
     db.session.commit()
     response_object = {

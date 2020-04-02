@@ -12,6 +12,8 @@ class Assembly(db.Model):
     descriptionEn = db.Column(db.Text(), unique=False)
     descriptionFr = db.Column(db.Text(), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    isCertipropane = db.Column(
+        db.Boolean, server_default='f', default=False, nullable=True)
 
     def __repr__(self):
         return '<Assembly {}>'.format(self.nameEn)
@@ -25,5 +27,6 @@ class Assembly(db.Model):
             'nameFr': self.nameFr,
             'descriptionEn': self.descriptionEn,
             'descriptionFr': self.descriptionFr,
-            'displayOrder': self.displayOrder
+            'displayOrder': self.displayOrder,
+            'isCertipropane': self.isCertipropane
         }

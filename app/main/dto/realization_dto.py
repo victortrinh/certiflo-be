@@ -15,7 +15,8 @@ class RealizationDTO:
         'capacity': fields.String(required=True, description='Capacity'),
         'material': fields.String(required=True, description='Material'),
         'compartments': fields.String(required=True, description='Compartments'),
-        'displayOrder': fields.Integer(required=False, description='Display Order')
+        'displayOrder': fields.Integer(required=False, description='Display Order'),
+        'isCertipropane': fields.Boolean(required=False, description='Is Certipropane')
     })
     full_realization = api.model('Full realization', {
         'id': fields.Integer(required=True, description='The id'),
@@ -29,7 +30,8 @@ class RealizationDTO:
         'capacity': fields.String(required=True, description='Capacity'),
         'material': fields.String(required=True, description='Material'),
         'compartments': fields.String(required=True, description='Compartments'),
-        'displayOrder': fields.Integer(required=False, description='Display Order')
+        'displayOrder': fields.Integer(required=False, description='Display Order'),
+        'isCertipropane': fields.Boolean(required=False, description='Is Certipropane')
     })
     realization_id = api.model('Realization id', {
         'id': fields.Integer(required=True, description='The realization id'),

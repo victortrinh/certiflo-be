@@ -8,7 +8,8 @@ class TelephoneDTO:
         'nameEn': fields.String(required=True, description='telephone name in french'),
         'nameFr': fields.String(required=True, description='telephone name in english'),
         'telephone': fields.String(required=True, description='telephone number'),
-        'displayOrder': fields.Integer(required=False, description='Display Order')
+        'displayOrder': fields.Integer(required=False, description='Display Order'),
+        'isCertipropane': fields.Boolean(required=False, description='Is Certipropane')
     })
     full_telephone = api.model('Full telephone', {
         'id': fields.Integer(required=True, description='The telephone id'),
@@ -16,7 +17,8 @@ class TelephoneDTO:
         'nameEn': fields.String(required=True, description='telephone name in french'),
         'nameFr': fields.String(required=True, description='telephone name in english'),
         'telephone': fields.String(required=True, description='telephone number'),
-        'displayOrder': fields.Integer(required=False, description='Display Order')
+        'displayOrder': fields.Integer(required=False, description='Display Order'),
+        'isCertipropane': fields.Boolean(required=False, description='Is Certipropane')
     })
     telephone_id = api.model('Telephone id', {
         'id': fields.Integer(required=True, description='The telephone id'),

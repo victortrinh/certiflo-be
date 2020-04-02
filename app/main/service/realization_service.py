@@ -23,7 +23,8 @@ def save_new_realization(data):
         capacity=data['capacity'],
         material=data['material'],
         compartments=data['compartments'],
-        displayOrder=data['displayOrder']
+        displayOrder=data['displayOrder'],
+        isCertipropane=data['isCertipropane']
     )
     save_changes(new_realization)
     response_object = {
@@ -47,6 +48,7 @@ def update_realization(data):
     record.capacity = data["capacity"]
     record.material = data["material"]
     record.compartments = data["compartments"]
+    record.isCertipropane = data["isCertipropane"]
     db.session.flush()
     db.session.commit()
     response_object = {
