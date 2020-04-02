@@ -9,6 +9,8 @@ class Resource(db.Model):
     page = db.Column(db.String(255), unique=False)
     object_key = db.Column(db.String(255), unique=False)
     resource = db.Column(db.Text, unique=False)
+    isHtml = db.Column(
+        db.Boolean, server_default='f', default=False, nullable=True)
 
     def __repr__(self):
         return '<Resource {}>'.format(self.resource)
@@ -19,5 +21,6 @@ class Resource(db.Model):
             'language': self.language,
             'page': self.page,
             'object_key': self.object_key,
-            'resource': self.resource
+            'resource': self.resource,
+            'isHtml': self.isHtml
         }

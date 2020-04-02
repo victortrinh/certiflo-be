@@ -26,7 +26,8 @@ def save_new_resource(data):
         page=data['page'],
         language=data['language'],
         object_key=data['object_key'],
-        resource=data['resource']
+        resource=data['resource'],
+        isHtml=data['isHtml']
     )
     save_changes(new_resource)
     response_object = {
@@ -41,6 +42,7 @@ def update_resource(data):
                          data['language'], Resource.object_key == data['object_key'])
     record = query.one()
     record.resource = data["resource"]
+    record.isHtml = data["isHtml"]
     db.session.flush()
     db.session.commit()
     response_object = {
@@ -56,6 +58,7 @@ def update_resource_by_id_and_language(data):
         Resource.id == data['id'], Resource.language == data['language'])
     record = query.one()
     record.resource = data["resource"]
+    record.isHtml = data["isHtml"]
     db.session.flush()
     db.session.commit()
     response_object = {

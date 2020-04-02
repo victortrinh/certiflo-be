@@ -14,5 +14,6 @@ class ResourceDTO:
         'language': fields.String(required=True, description='resource language'),
         'page': fields.String(required=True, description='resource page'),
         'object_key': fields.String(required=True, description='resource key'),
-        'resource': fields.String(required=True, description='resource')
+        'resource': fields.String(required=True, description='resource'),
+        'isHtml': fields.Boolean(required=False, description='Is Certipropane')
     })
