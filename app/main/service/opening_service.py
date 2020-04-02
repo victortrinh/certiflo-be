@@ -18,7 +18,8 @@ def save_new_opening(data):
         nameFr=data['nameFr'],
         opening=data['opening'],
         closing=data['closing'],
-        displayOrder=data['displayOrder']
+        displayOrder=data['displayOrder'],
+        isCertipropane=data['isCertipropane']
     )
     save_changes(new_opening)
     response_object = {
@@ -36,6 +37,7 @@ def update_opening(data):
     record.nameEn = data["nameEn"]
     record.nameFr = data["nameFr"]
     record.displayOrder = data["displayOrder"]
+    record.isCertipropane = data["isCertipropane"]
     db.session.flush()
     db.session.commit()
     response_object = {

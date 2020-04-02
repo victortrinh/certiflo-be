@@ -16,6 +16,8 @@ class Realization(db.Model):
     material = db.Column(db.String(255), unique=False)
     compartments = db.Column(db.String(255), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    isCertipropane = db.Column(
+        db.Boolean, server_default='f', default=False, nullable=True)
 
     def __repr__(self):
         return '<Realization {}>'.format(self.specification)
@@ -33,5 +35,6 @@ class Realization(db.Model):
             'capacity': self.capacity,
             'material': self.material,
             'compartments': self.compartments,
-            'displayOrder': self.displayOrder
+            'displayOrder': self.displayOrder,
+            'isCertipropane': self.isCertipropane
         }

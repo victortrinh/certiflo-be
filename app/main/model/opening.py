@@ -11,6 +11,8 @@ class Opening(db.Model):
     opening = db.Column(db.String(255), unique=False)
     closing = db.Column(db.String(255), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    isCertipropane = db.Column(
+        db.Boolean, server_default='f', default=False, nullable=True)
 
     def __repr__(self):
         return '<Opening {}>'.format(self.nameEn)
@@ -23,5 +25,6 @@ class Opening(db.Model):
             'nameFr': self.nameFr,
             'opening': self.opening,
             'closing': self.closing,
-            'displayOrder': self.displayOrder
+            'displayOrder': self.displayOrder,
+            'isCertipropane': self.isCertipropane
         }

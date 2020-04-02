@@ -10,6 +10,8 @@ class Email(db.Model):
     nameFr = db.Column(db.String(255), unique=False)
     email = db.Column(db.String(255), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    isCertipropane = db.Column(
+        db.Boolean, server_default='f', default=False, nullable=True)
 
     def __repr__(self):
         return '<Email {}>'.format(self.nameEn)
@@ -21,5 +23,6 @@ class Email(db.Model):
             'nameEn': self.nameEn,
             'nameFr': self.nameFr,
             'email': self.email,
-            'displayOrder': self.displayOrder
+            'displayOrder': self.displayOrder,
+            'isCertipropane': self.isCertipropane
         }
