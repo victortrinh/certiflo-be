@@ -45,6 +45,13 @@ def save_new_user(data):
 def change_user_password(data):
     query = db.session.query(User)
     user = query.filter_by(email=data['email']).first()
+    if not user.check_password(data['current_password']):
+        response_object = {
+            'status': 'fail',
+            'message': 'Current password is wrong',
+        }
+        return response_object, 409
+
     if data['password'] != data['confirm_password']:
         response_object = {
             'status': 'fail',

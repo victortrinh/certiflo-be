@@ -10,6 +10,7 @@ class UserDto:
     })
     user_change_password = api.model('user_change_password', {
         'email': fields.String(required=True, description='user email address'),
-        'password': fields.String(required=True, description='user password'),
-        'confirm_password': fields.String(required=True, description='user confirm password'),
+        'current_password': fields.String(required=True, description='Current user password'),
+        'password': fields.String(required=True, description='New user password'),
+        'confirm_password': fields.String(required=True, description='New user confirm password'),
     })
