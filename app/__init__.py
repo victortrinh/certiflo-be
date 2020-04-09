@@ -25,6 +25,7 @@ from .main.controller.gallery_image_controller import api as gallery_image_ns
 from .main.controller.gallery_controller import api as gallery_ns
 from .main.controller.job_posting_controller import api as job_posting_ns
 from .main.controller.all_controller import api as all_ns
+from .main.controller.file_controller import api as file_ns
 
 BASE_URL = '/api'
 
@@ -71,5 +72,6 @@ api.add_namespace(gallery_image_ns, path=BASE_URL + "/galleryImage")
 api.add_namespace(gallery_ns, path=BASE_URL + "/gallery")
 api.add_namespace(job_posting_ns, path=BASE_URL + "/jobPosting")
 api.add_namespace(all_ns, path=BASE_URL + "/allModels")
+api.add_namespace(file_ns, path=BASE_URL + "/file")
 
 CORS(api.blueprint)
