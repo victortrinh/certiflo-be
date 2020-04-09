@@ -46,6 +46,26 @@ def update_product(data):
     return response_object, 201
 
 
+def update_products(data):
+    query = db.session.query(Product)
+    for product in data:
+        new_query = query.filter(Product.id == product['id'])
+        record = new_query.one()
+        record.image = product["image"]
+        record.nameEn = product["nameEn"]
+        record.nameFr = product["nameFr"]
+        record.descriptionEn = product["descriptionEn"]
+        record.descriptionFr = product["descriptionFr"]
+        record.displayOrder = product["displayOrder"]
+    db.session.flush()
+    db.session.commit()
+    response_object = {
+        'status': 'success',
+        'message': 'Successfully updated row.',
+    }
+    return response_object, 201
+
+
 def save_changes(data):
     db.session.add(data)
     db.session.commit()

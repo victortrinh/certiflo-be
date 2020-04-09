@@ -1,6 +1,6 @@
 ﻿from flask_restplus import Resource
 from flask import request
-from ..service.assembly_service import get_assemblies, save_new_assembly, update_assembly, delete_assembly
+from ..service.assembly_service import get_assemblies, save_new_assembly, update_assembly, delete_assembly, update_assemblies
 from ..dto.assembly_dto import AssemblyDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -36,6 +36,17 @@ class UpdateAssembly(Resource):
     def put(self):
         data = request.json
         return update_assembly(data)
+
+
+@api.route('/updates')
+class UpdateAssemblies(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
+    @api.doc('Update the assembly')
+    @api.expect([AssemblyDTO.full_assembly], validate=True)
+    def put(self):
+        data = request.json
+        return update_assemblies(data)
 
 
 @api.route('/delete')

@@ -45,6 +45,25 @@ def update_email(data):
     return response_object, 201
 
 
+def update_emails(data):
+    query = db.session.query(Email)
+    for email in data:
+        new_query = query.filter(Email.id == email['id'])
+        record = new_query.one()
+        record.email = email["email"]
+        record.nameEn = email["nameEn"]
+        record.nameFr = email["nameFr"]
+        record.displayOrder = email["displayOrder"]
+        record.isCertipropane = email["isCertipropane"]
+    db.session.flush()
+    db.session.commit()
+    response_object = {
+        'status': 'success',
+        'message': 'Successfully updated row.',
+    }
+    return response_object, 201
+
+
 def save_changes(data):
     db.session.add(data)
     db.session.commit()

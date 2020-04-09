@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.realization_service import get_realizations, save_new_realization, update_realization, delete_realization
+from ..service.realization_service import get_realizations, save_new_realization, update_realization, delete_realization, update_realizations
 from ..dto.realization_dto import RealizationDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -36,6 +36,17 @@ class UpdateRealization(Resource):
     def put(self):
         data = request.json
         return update_realization(data)
+
+
+@api.route('/updates')
+class UpdateRealizations(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
+    @api.doc('Update the realization')
+    @api.expect([RealizationDTO.full_realization], validate=True)
+    def put(self):
+        data = request.json
+        return update_realizations(data)
 
 
 @api.route('/delete')

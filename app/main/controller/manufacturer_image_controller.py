@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.manufacturerImage_service import get_all_manufacturer_images, save_new_manufacturer_image, delete_manufacturer_image, update_manufacturer_image
+from ..service.manufacturerImage_service import get_all_manufacturer_images, save_new_manufacturer_image, delete_manufacturer_image, update_manufacturer_image, update_manufacturer_images
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
 from ..dto.manufacturer_image_dto import ManufacturerImageDTO
@@ -37,6 +37,17 @@ class UpdateManufacturerImage(Resource):
     def put(self):
         data = request.json
         return update_manufacturer_image(data)
+
+
+@api.route('/updates')
+class UpdateManufacturerImages(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
+    @api.doc('Update manufacturer image')
+    @api.expect([ManufacturerImageDTO.manufacturerImage], validate=True)
+    def put(self):
+        data = request.json
+        return update_manufacturer_images(data)
 
 
 @api.route('/delete')

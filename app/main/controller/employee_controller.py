@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.employee_service import get_employees, save_new_employee, update_employee, delete_employee
+from ..service.employee_service import get_employees, save_new_employee, update_employee, delete_employee, update_employees
 from ..dto.employee_dto import EmployeeDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -36,6 +36,17 @@ class UpdateEmployee(Resource):
     def put(self):
         data = request.json
         return update_employee(data)
+
+
+@api.route('/updates')
+class UpdateEmployees(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
+    @api.doc('Update an employee')
+    @api.expect([EmployeeDTO.full_employee], validate=True)
+    def put(self):
+        data = request.json
+        return update_employees(data)
 
 
 @api.route('/delete')

@@ -58,6 +58,32 @@ def update_realization(data):
     return response_object, 201
 
 
+def update_realizations(data):
+    query = db.session.query(Realization)
+    for realization in data:
+        new_query = query.filter(Realization.id == realization['id'])
+        record = new_query.one()
+        record.image = realization["image"]
+        record.realizationTypeId = realization["realizationTypeId"]
+        record.descriptionEn = realization["descriptionEn"]
+        record.descriptionFr = realization["descriptionFr"]
+        record.projectTypeFr = realization["projectTypeFr"]
+        record.projectTypeEn = realization["projectTypeEn"]
+        record.specification = realization["specification"]
+        record.displayOrder = realization["displayOrder"]
+        record.capacity = realization["capacity"]
+        record.material = realization["material"]
+        record.compartments = realization["compartments"]
+        record.isCertipropane = realization["isCertipropane"]
+    db.session.flush()
+    db.session.commit()
+    response_object = {
+        'status': 'success',
+        'message': 'Successfully updated row.',
+    }
+    return response_object, 201
+
+
 def save_changes(data):
     db.session.add(data)
     db.session.commit()

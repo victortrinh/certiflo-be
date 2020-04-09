@@ -37,6 +37,9 @@ class GetFiles(Resource):
     @api.doc('Get files')
     def get(self):
         files = []
+        if not os.path.exists(UPLOAD_DIRECTORY):
+            os.makedirs(UPLOAD_DIRECTORY)
+
         for filename in os.listdir(UPLOAD_DIRECTORY):
             path = os.path.join(UPLOAD_DIRECTORY, filename)
             if os.path.isfile(path):

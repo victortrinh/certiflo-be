@@ -1,6 +1,6 @@
 ﻿from flask_restplus import Resource
 from flask import request
-from ..service.job_posting_service import get_job_postings, save_new_job_posting, update_job_posting, delete_job_posting
+from ..service.job_posting_service import get_job_postings, save_new_job_posting, update_job_posting, delete_job_posting, update_job_postings
 from ..dto.job_posting_dto import JobPostingDTO
 
 api = JobPostingDTO.api
@@ -29,6 +29,15 @@ class UpdateJobPosting(Resource):
     def put(self):
         data = request.json
         return update_job_posting(data)
+
+
+@api.route('/updates')
+class UpdateJobPostings(Resource):
+    @api.doc('Update the job posting')
+    @api.expect([JobPostingDTO.full_job_posting], validate=True)
+    def put(self):
+        data = request.json
+        return update_job_postings(data)
 
 
 @api.route('/delete')

@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.product_service import get_products, save_new_product, update_product, delete_product
+from ..service.product_service import get_products, save_new_product, update_product, delete_product, update_products
 from ..dto.product_dto import ProductDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -36,6 +36,17 @@ class UpdateProduct(Resource):
     def put(self):
         data = request.json
         return update_product(data)
+
+
+@api.route('/updates')
+class UpdateProducts(Resource):
+    @auth.login_required
+    @api.doc(security='Bearer')
+    @api.doc('Update the product')
+    @api.expect([ProductDTO.full_product], validate=True)
+    def put(self):
+        data = request.json
+        return update_products(data)
 
 
 @api.route('/delete')
