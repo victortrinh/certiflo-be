@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.tanker_service import get_tankers, save_new_tanker, update_tanker, delete_tanker, update_tankers
+from ..service.tanker_service import get_tankers, save_new_tanker, delete_tanker, update_tankers
 from ..dto.tanker_dto import TankerDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -28,17 +28,6 @@ class SaveTanker(Resource):
 
 
 @api.route('/update')
-class UpdateTanker(Resource):
-    @auth.login_required
-    @api.doc(security='Bearer')
-    @api.doc('Update the tanker')
-    @api.expect(TankerDTO.full_tanker, validate=True)
-    def put(self):
-        data = request.json
-        return update_tanker(data)
-
-
-@api.route('/updates')
 class UpdateTankers(Resource):
     @auth.login_required
     @api.doc(security='Bearer')

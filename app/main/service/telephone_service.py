@@ -27,24 +27,6 @@ def save_new_telephone(data):
     return response_object, 201
 
 
-def update_telephone(data):
-    query = db.session.query(Telephone)
-    query = query.filter(Telephone.id == data['id'])
-    record = query.one()
-    record.telephone = data["telephone"]
-    record.nameEn = data["nameEn"]
-    record.nameFr = data["nameFr"]
-    record.displayOrder = data["displayOrder"]
-    record.isCertipropane = data["isCertipropane"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_telephones(data):
     query = db.session.query(Telephone)
     for telephone in data:

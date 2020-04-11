@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.telephone_service import get_telephones, save_new_telephone, update_telephone, delete_telephone, update_telephones
+from ..service.telephone_service import get_telephones, save_new_telephone, delete_telephone, update_telephones
 from ..dto.telephone_dto import TelephoneDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -29,17 +29,6 @@ class SaveTelephone(Resource):
 
 
 @api.route('/update')
-class UpdateTelephone(Resource):
-    @auth.login_required
-    @api.doc(security='Bearer')
-    @api.doc('Update the telephone')
-    @api.expect(TelephoneDTO.full_telephone, validate=True)
-    def put(self):
-        data = request.json
-        return update_telephone(data)
-
-
-@api.route('/updates')
 class UpdateTelephones(Resource):
     @auth.login_required
     @api.doc(security='Bearer')

@@ -1,6 +1,6 @@
 ﻿from flask_restplus import Resource
 from flask import request
-from ..service.assembly_type_service import get_assembly_types, save_new_assembly_type, update_assembly_type, delete_assembly_type, update_assembly_types
+from ..service.assembly_type_service import get_assembly_types, save_new_assembly_type, delete_assembly_type, update_assembly_types
 from ..dto.assembly_type_dto import AssemblyTypeDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -28,17 +28,6 @@ class SaveAssemblyType(Resource):
 
 
 @api.route('/update')
-class UpdateAssemblyType(Resource):
-    @auth.login_required
-    @api.doc(security='Bearer')
-    @api.doc('Update the assembly type')
-    @api.expect(AssemblyTypeDTO.full_assembly_type, validate=True)
-    def put(self):
-        data = request.json
-        return update_assembly_type(data)
-
-
-@api.route('/updates')
 class UpdateAssemblyTypes(Resource):
     @auth.login_required
     @api.doc(security='Bearer')

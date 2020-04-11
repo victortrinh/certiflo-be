@@ -18,30 +18,12 @@ def save_new_product(data):
         descriptionEn=data['descriptionEn'],
         descriptionFr=data['descriptionFr'],
         image=data['image'],
-        displayOrder=data['displayOrder']
+        displayOrder=data['displayOrder'],
+        fileName=data['fileName']
     )
     save_changes(new_product)
     response_object = {
         'id': new_product.id,
-    }
-    return response_object, 201
-
-
-def update_product(data):
-    query = db.session.query(Product)
-    query = query.filter(Product.id == data['id'])
-    record = query.one()
-    record.image = data["image"]
-    record.nameEn = data["nameEn"]
-    record.nameFr = data["nameFr"]
-    record.descriptionEn = data["descriptionEn"]
-    record.descriptionFr = data["descriptionFr"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
     }
     return response_object, 201
 
@@ -57,6 +39,7 @@ def update_products(data):
         record.descriptionEn = product["descriptionEn"]
         record.descriptionFr = product["descriptionFr"]
         record.displayOrder = product["displayOrder"]
+        record.fileName = product["fileName"]
     db.session.flush()
     db.session.commit()
     response_object = {

@@ -11,6 +11,7 @@ class Product(db.Model):
     descriptionEn = db.Column(db.Text, unique=False)
     descriptionFr = db.Column(db.Text, unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    fileName = db.Column(db.String(255), unique=False)
 
     def __repr__(self):
         return '<Product {}>'.format(self.nameEn)
@@ -23,5 +24,6 @@ class Product(db.Model):
             'nameFr': self.nameFr,
             'descriptionEn': self.descriptionEn,
             'descriptionFr': self.descriptionFr,
-            'displayOrder': self.displayOrder
+            'displayOrder': self.displayOrder,
+            'fileName': self.fileName
         }

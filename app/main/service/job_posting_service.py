@@ -31,29 +31,6 @@ def save_new_job_posting(data):
     return response_object, 201
 
 
-def update_job_posting(data):
-    query = db.session.query(JobPosting)
-    query = query.filter(JobPosting.id == data['id'])
-    record = query.one()
-    record.jobTitleFr = data["jobTitleFr"]
-    record.jobTitleEn = data["jobTitleEn"]
-    record.jobSummaryFr = data["jobSummaryFr"]
-    record.jobSummaryEn = data["jobSummaryEn"]
-    record.companyDescriptionFr = data["companyDescriptionFr"]
-    record.companyDescriptionEn = data["companyDescriptionEn"]
-    record.jobDescriptionFr = data["jobDescriptionFr"]
-    record.jobDescriptionEn = data["jobDescriptionEn"]
-    record.displayOrder = data["displayOrder"]
-    record.locationId = data["locationId"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_job_postings(data):
     query = db.session.query(JobPosting)
     for job in data:

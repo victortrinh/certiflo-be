@@ -43,41 +43,6 @@ def save_new_tanker(data):
     return response_object, 201
 
 
-def update_tanker(data):
-    query = db.session.query(Tanker)
-    query = query.filter(Tanker.id == data['id'])
-    record = query.one()
-    record.nameEn = data["nameEn"]
-    record.nameFr = data['nameFr']
-    record.unitId = data['unitId']
-    record.image = data['image']
-    record.kilometers = data['kilometers']
-    record.engineEn = data['engineEn']
-    record.engineFr = data['engineFr']
-    record.manufacturer = data['manufacturer']
-    record.year = data['year']
-    record.capacityInLitres = data['capacityInLitres']
-    record.displayOrder = data["displayOrder"]
-    record.isCertipropane = data["isCertipropane"]
-    record.capacity = data['capacity']
-    record.material = data['material']
-    record.noCompartments = data['noCompartments']
-    record.price = data['price']
-    record.dispenser = data['dispenser']
-    record.availability = data['availability']
-    record.cylinderRefill = data['cylinderRefill']
-    record.pump = data['pump']
-    record.additionalInformationEn = data['additionalInformationEn']
-    record.additionalInformationFr = data['additionalInformationFr']
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_tankers(data):
     query = db.session.query(Tanker)
     for tanker in data:

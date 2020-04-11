@@ -24,22 +24,6 @@ def save_new_tankerType(data):
     return response_object, 201
 
 
-def update_tankerType(data):
-    query = db.session.query(TankerType)
-    query = query.filter(TankerType.id == data['id'])
-    record = query.one()
-    record.nameEn = data["nameEn"]
-    record.nameFr = data["nameFr"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_tankerTypes(data):
     query = db.session.query(TankerType)
     for tanker in data:

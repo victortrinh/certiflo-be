@@ -24,22 +24,6 @@ def save_new_manufacturer(data):
     return response_object, 201
 
 
-def update_manufacturer(data):
-    query = db.session.query(Manufacturer)
-    query = query.filter(Manufacturer.id == data['id'])
-    record = query.one()
-    record.nameEn = data["nameEn"]
-    record.nameFr = data["nameFr"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_manufacturers(data):
     query = db.session.query(Manufacturer)
     for manufacturer in data:

@@ -21,23 +21,6 @@ def save_new_location(data):
     save_changes(new_location)
 
 
-def update_location(data):
-    query = db.session.query(Location)
-    query = query.filter(Location.id == data['id'])
-    record = query.one()
-    record.address = data["address"]
-    record.nameEn = data["nameEn"]
-    record.nameFr = data["nameFr"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_locations(data):
     query = db.session.query(Location)
     for location in data:

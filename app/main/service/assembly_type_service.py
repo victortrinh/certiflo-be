@@ -24,23 +24,6 @@ def save_new_assembly_type(data):
     return response_object, 201
 
 
-def update_assembly_type(data):
-    query = db.session.query(AssemblyType)
-    query = query.filter(AssemblyType.id == data['id'])
-    record = query.one()
-    record.id = data["id"]
-    record.nameFr = data["nameFr"]
-    record.nameEn = data["nameEn"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_assembly_types(data):
     query = db.session.query(AssemblyType)
     for assembly_type in data:

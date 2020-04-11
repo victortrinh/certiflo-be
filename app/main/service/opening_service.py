@@ -28,25 +28,6 @@ def save_new_opening(data):
     return response_object, 201
 
 
-def update_opening(data):
-    query = db.session.query(Opening)
-    query = query.filter(Opening.id == data['id'])
-    record = query.one()
-    record.opening = data["opening"]
-    record.closing = data["closing"]
-    record.nameEn = data["nameEn"]
-    record.nameFr = data["nameFr"]
-    record.displayOrder = data["displayOrder"]
-    record.isCertipropane = data["isCertipropane"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_openings(data):
     query = db.session.query(Opening)
     for opening in data:

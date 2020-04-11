@@ -23,21 +23,6 @@ def save_new_gallery(data):
     return response_object, 201
 
 
-def update_gallery(data):
-    query = db.session.query(Gallery)
-    query = query.filter(Gallery.id == data['id'])
-    record = query.one()
-    record.company = data["company"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_galleries(data):
     query = db.session.query(Gallery)
     for gallery in data:

@@ -24,22 +24,6 @@ def save_new_realization_type(data):
     return response_object, 201
 
 
-def update_realization_type(data):
-    query = db.session.query(RealizationType)
-    query = query.filter(RealizationType.id == data['id'])
-    record = query.one()
-    record.realizationTypeEn = data["realizationTypeEn"]
-    record.realizationTypeFr = data["realizationTypeFr"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_realization_types(data):
     query = db.session.query(RealizationType)
     for realizationType in data:

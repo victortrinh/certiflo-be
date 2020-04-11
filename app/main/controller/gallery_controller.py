@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.gallery_service import get_galleries, save_new_gallery, update_gallery, delete_gallery, update_galleries
+from ..service.gallery_service import get_galleries, save_new_gallery, delete_gallery, update_galleries
 from ..dto.gallery_dto import GalleryDTO
 
 api = GalleryDTO.api
@@ -23,15 +23,6 @@ class SaveGallery(Resource):
 
 
 @api.route('/update')
-class UpdateGallery(Resource):
-    @api.doc('Update the gallery')
-    @api.expect(GalleryDTO.full_gallery, validate=True)
-    def put(self):
-        data = request.json
-        return update_gallery(data)
-
-
-@api.route('/updates')
 class UpdateGalleries(Resource):
     @api.doc('Update the gallery')
     @api.expect([GalleryDTO.full_gallery], validate=True)

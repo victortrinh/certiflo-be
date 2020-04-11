@@ -31,29 +31,6 @@ def save_new_employee(data):
     return response_object, 201
 
 
-def update_employee(data):
-    query = db.session.query(Employee)
-    query = query.filter(Employee.id == data['id'])
-    record = query.one()
-    record.firstName = data["firstName"]
-    record.lastName = data["lastName"]
-    record.roleFr = data["roleFr"]
-    record.roleEn = data["roleEn"]
-    record.email = data["email"]
-    record.company = data['company']
-    record.image = data["image"]
-    record.descriptionFr = data["descriptionFr"]
-    record.descriptionEn = data["descriptionEn"]
-    record.displayOrder = data["displayOrder"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_employees(data):
     query = db.session.query(Employee)
     for employee in data:

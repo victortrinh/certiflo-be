@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.opening_service import get_openings, save_new_opening, update_opening, delete_opening, update_openings
+from ..service.opening_service import get_openings, save_new_opening, delete_opening, update_openings
 from ..dto.opening_dto import OpeningDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -28,17 +28,6 @@ class SaveOpening(Resource):
 
 
 @api.route('/update')
-class UpdateOpening(Resource):
-    @auth.login_required
-    @api.doc(security='Bearer')
-    @api.doc('Update the opening')
-    @api.expect(OpeningDTO.full_opening, validate=True)
-    def put(self):
-        data = request.json
-        return update_opening(data)
-
-
-@api.route('/updates')
 class UpdateOpenings(Resource):
     @auth.login_required
     @api.doc(security='Bearer')

@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.manufacturer_service import get_all_manufacturer, save_new_manufacturer, delete_manufacturer, update_manufacturer, update_manufacturers
+from ..service.manufacturer_service import get_all_manufacturer, save_new_manufacturer, delete_manufacturer, update_manufacturers
 from ..dto.manufacturer_dto import ManufacturerDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -28,17 +28,6 @@ class SaveManufacturer(Resource):
 
 
 @api.route('/update')
-class UpdateManufacturer(Resource):
-    @auth.login_required
-    @api.doc(security='Bearer')
-    @api.doc('Update manufacturer')
-    @api.expect(ManufacturerDTO.manufacturer, validate=True)
-    def put(self):
-        data = request.json
-        return update_manufacturer(data)
-
-
-@api.route('/updates')
 class UpdateManufacturers(Resource):
     @auth.login_required
     @api.doc(security='Bearer')

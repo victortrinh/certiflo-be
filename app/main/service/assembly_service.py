@@ -29,27 +29,6 @@ def save_new_assembly(data):
     return response_object, 201
 
 
-def update_assembly(data):
-    query = db.session.query(Assembly)
-    query = query.filter(Assembly.id == data['id'])
-    record = query.one()
-    record.assemblyTypeId = data["assemblyTypeId"]
-    record.nameFr = data["nameFr"]
-    record.nameEn = data["nameEn"]
-    record.descriptionFr = data["descriptionFr"]
-    record.descriptionEn = data["descriptionEn"]
-    record.displayOrder = data["displayOrder"]
-    record.isCertipropane = data["isCertipropane"]
-    record.image = data["image"]
-    db.session.flush()
-    db.session.commit()
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated row.',
-    }
-    return response_object, 201
-
-
 def update_assemblies(data):
     query = db.session.query(Assembly)
     for assembly in data:

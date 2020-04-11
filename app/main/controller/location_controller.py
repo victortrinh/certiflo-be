@@ -1,6 +1,6 @@
 from flask_restplus import Resource
 from flask import request
-from ..service.location_service import get_all_locations, save_new_location, update_location, delete_location, update_locations
+from ..service.location_service import get_all_locations, save_new_location, delete_location, update_locations
 from ..dto.location_dto import LocationDTO
 from ..service.auth_service import Auth
 from flask_httpauth import HTTPTokenAuth
@@ -28,17 +28,6 @@ class SaveLocation(Resource):
 
 
 @api.route('/update')
-class UpdateLocation(Resource):
-    @auth.login_required
-    @api.doc(security='Bearer')
-    @api.doc('Update the location')
-    @api.expect(LocationDTO.location, validate=True)
-    def put(self):
-        data = request.json
-        return update_location(data)
-
-
-@api.route('/updates')
 class UpdateLocations(Resource):
     @auth.login_required
     @api.doc(security='Bearer')
