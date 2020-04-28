@@ -6,7 +6,7 @@ class Tanker(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     tankerTypeId = db.Column(db.Integer, unique=False)
-    unitId = db.Column(db.String(255), unique=True)
+    unitId = db.Column(db.String(255), unique=False)
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)
     image = db.Column(db.String(255), unique=False)
