@@ -34,8 +34,8 @@ def save_new_employee(data):
 def update_employees(data):
     query = db.session.query(Employee)
     for employee in data:
-        query = query.filter(Employee.id == employee['id'])
-        record = query.one()
+        new_query = query.filter(Employee.id == employee['id'])
+        record = new_query.one()
         record.firstName = employee["firstName"]
         record.lastName = employee["lastName"]
         record.roleFr = employee["roleFr"]
