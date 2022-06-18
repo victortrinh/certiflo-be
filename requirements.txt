@@ -10,7 +10,7 @@ Flask-Bcrypt==0.7.1
 Flask-Script==2.0.6
 flask-restplus==0.12.1
 Flask-Testing==0.7.1
-psycopg2==2.7.7
+psycopg2-binary==2.7.7
 Flask-WTF==0.14.2
 PyJWT==1.4.0
 flask-cors==3.0.7
