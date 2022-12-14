@@ -13,7 +13,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgres://lmqqsspkekuaar:d5de1f29813bdb355d79b824b5ad78c2af8be4c487317ca24885060824a0cfb2@ec2-54-208-158-56.compute-1.amazonaws.com:5432/d7448hsfkq2i2q'
+    SQLALCHEMY_DATABASE_URI = 'postgres://sfewlrtifivowy:3a328968685b4fe6d2a8ca7c146f4292eeaf21779d8c42bd9c032705d4cc49f0@ec2-34-231-63-30.compute-1.amazonaws.com:5432/d2hai88lr5m2tl'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DISABLE_AUTHENTICATION = False
 
