@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.location_service import get_all_locations, save_new_location, delete_location, update_locations
 from ..dto.location_dto import LocationDTO

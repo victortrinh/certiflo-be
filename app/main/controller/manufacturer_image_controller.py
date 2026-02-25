@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.manufacturerImage_service import get_all_manufacturer_images, save_new_manufacturer_image, delete_manufacturer_image, update_manufacturer_images
 from ..service.auth_service import Auth

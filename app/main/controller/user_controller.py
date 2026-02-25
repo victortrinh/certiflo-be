@@ -1,5 +1,5 @@
 from flask import request
-from flask_restplus import Resource
+from flask_restx import Resource
 
 from ..dto.user_dto import UserDto
 from ..service.user_service import save_new_user, get_all_users, get_a_user, change_user_password

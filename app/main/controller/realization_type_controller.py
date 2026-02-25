@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.realization_type_service import get_realization_types, save_new_realization_type, delete_realization_type, update_realization_types, update_realization_types
 from ..dto.realization_type_dto import RealizationTypeDTO

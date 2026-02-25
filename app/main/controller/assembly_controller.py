@@ -1,4 +1,4 @@
-﻿from flask_restplus import Resource
+﻿from flask_restx import Resource
 from flask import request
 from ..service.assembly_service import get_assemblies, save_new_assembly, delete_assembly, update_assemblies
 from ..dto.assembly_dto import AssemblyDTO

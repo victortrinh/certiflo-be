@@ -1,4 +1,4 @@
-﻿from flask_restplus import Resource
+﻿from flask_restx import Resource
 from flask import request
 from ..service.job_posting_service import get_job_postings, save_new_job_posting, delete_job_posting, update_job_postings
 from ..dto.job_posting_dto import JobPostingDTO
