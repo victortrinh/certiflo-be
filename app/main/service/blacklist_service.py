@@ -16,6 +16,6 @@ def save_token(token):
     except Exception as e:
         response_object = {
             'status': 'fail',
-            'message': e
+            'message': 'Failed to blacklist token.'
         }
-        return response_object, 200
+        return response_object, 500

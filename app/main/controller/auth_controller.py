@@ -3,6 +3,7 @@ from flask_restx import Resource
 
 from app.main.service.auth_service import Auth
 from ..dto.auth_dto import AuthDto
+from ..middleware.rate_limiter import limiter
 
 api = AuthDto.api
 user_auth = AuthDto.user_auth
@@ -12,6 +13,7 @@ class UserLogin(Resource):
     """
         User Login Resource
     """
+    decorators = [limiter.limit("5 per minute")]
     @api.doc('user login')
     @api.expect(user_auth, validate=True)
     def post(self):

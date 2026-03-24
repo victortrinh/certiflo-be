@@ -3,9 +3,7 @@ import os
 from flask_restx import Resource
 from flask import request, jsonify, send_from_directory
 from ..dto.file_dto import FileDTO
-from ..service.all_service import get_all
 from ..service.auth_service import Auth
-from flask_httpauth import HTTPTokenAuth
 from werkzeug.datastructures import FileStorage
 from werkzeug.utils import secure_filename
 
@@ -14,6 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 UPLOAD_DIRECTORY = os.path.join(BASE_DIR, 'uploads')
 
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB
 
 auth = Auth.auth
 api = FileDTO.api
@@ -33,6 +32,7 @@ def allowed_file(filename):
 
 @api.route("/")
 class GetFiles(Resource):
+    @auth.login_required
     @api.doc(security='Bearer')
     @api.doc('Get files')
     def get(self):
@@ -49,15 +49,16 @@ class GetFiles(Resource):
 
 @api.route("/download/<fileName>")
 class Download(Resource):
+    @auth.login_required
     @api.doc(security='Bearer')
     @api.doc('Download file')
     def get(self, fileName):
-        data = request.json
-        return send_from_directory(UPLOAD_DIRECTORY, fileName, as_attachment=True)
+        return send_from_directory(UPLOAD_DIRECTORY, secure_filename(fileName), as_attachment=True)
 
 
 @api.route('/upload')
 class Upload(Resource):
+    @auth.login_required
     @api.doc(security='Bearer')
     @api.doc('Save new file')
     @api.expect(upload_parser)
@@ -74,6 +75,13 @@ class Upload(Resource):
             resp = jsonify({'message': 'No file selected for uploading'})
             resp.status_code = 400
             return resp
+        file.seek(0, 2)
+        size = file.tell()
+        file.seek(0)
+        if size > MAX_FILE_SIZE:
+            resp = jsonify({'message': 'File too large. Maximum size is 10 MB.'})
+            resp.status_code = 413
+            return resp
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(UPLOAD_DIRECTORY, filename))
@@ -82,6 +90,6 @@ class Upload(Resource):
             return resp
         else:
             resp = jsonify(
-                {'message': 'Allowed file types are txt, pdf, png, jpg, jpeg, gif'})
+                {'message': 'Allowed file types are: pdf'})
             resp.status_code = 400
             return resp
