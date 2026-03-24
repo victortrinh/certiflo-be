@@ -5,7 +5,7 @@ class Tanker(db.Model):
     __tablename__ = "tankers"
 
     id = db.Column(db.Integer, primary_key=True)
-    tankerTypeId = db.Column(db.Integer, unique=False)
+    tankerTypeId = db.Column(db.Integer, db.ForeignKey('tankerTypes.id', ondelete='CASCADE'))
     unitId = db.Column(db.String(255), unique=False)
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)

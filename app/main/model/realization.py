@@ -5,7 +5,7 @@ class Realization(db.Model):
     __tablename__ = "realizations"
 
     id = db.Column(db.Integer, primary_key=True)
-    realizationTypeId = db.Column(db.Integer, unique=False)
+    realizationTypeId = db.Column(db.Integer, db.ForeignKey('realizationTypes.id', ondelete='CASCADE'))
     descriptionFr = db.Column(db.String(255), unique=False)
     descriptionEn = db.Column(db.String(255), unique=False)
     projectTypeFr = db.Column(db.String(255), unique=False)

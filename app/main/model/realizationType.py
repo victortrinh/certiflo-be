@@ -8,6 +8,7 @@ class RealizationType(db.Model):
     realizationTypeEn = db.Column(db.String(255), unique=False)
     realizationTypeFr = db.Column(db.String(255), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    realizations = db.relationship('Realization', backref='realization_type', cascade='all, delete-orphan', passive_deletes=True, lazy=True)
 
     def __repr__(self):
         return '<RealizationType {}>'.format(self.realisationTypeEn)

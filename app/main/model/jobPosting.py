@@ -13,7 +13,7 @@ class JobPosting(db.Model):
     companyDescriptionEn = db.Column(db.Text, unique=False)
     jobDescriptionFr = db.Column(db.Text, unique=False)
     jobDescriptionEn = db.Column(db.Text, unique=False)
-    locationId = db.Column(db.Integer, unique=False)
+    locationId = db.Column(db.Integer, db.ForeignKey('locations.id', ondelete='CASCADE'))
     displayOrder = db.Column(db.Integer, unique=False)
 
     def __repr__(self):

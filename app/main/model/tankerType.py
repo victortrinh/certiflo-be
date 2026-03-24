@@ -8,6 +8,7 @@ class TankerType(db.Model):
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    tankers = db.relationship('Tanker', backref='tanker_type', cascade='all, delete-orphan', passive_deletes=True, lazy=True)
 
     def __repr__(self):
         return '<TankerType {}>'.format(self.nameEn)

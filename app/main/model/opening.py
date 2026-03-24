@@ -5,7 +5,7 @@ class Opening(db.Model):
     __tablename__ = "openings"
 
     id = db.Column(db.Integer, primary_key=True)
-    locationId = db.Column(db.String(255), unique=False)
+    locationId = db.Column(db.Integer, db.ForeignKey('locations.id', ondelete='CASCADE'))
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)
     opening = db.Column(db.String(255), unique=False)

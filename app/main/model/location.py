@@ -9,6 +9,10 @@ class Location(db.Model):
     nameFr = db.Column(db.String(255), unique=False)
     address = db.Column(db.String(255), unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
+    emails = db.relationship('Email', backref='location', cascade='all, delete-orphan', passive_deletes=True, lazy=True)
+    openings = db.relationship('Opening', backref='location', cascade='all, delete-orphan', passive_deletes=True, lazy=True)
+    telephones = db.relationship('Telephone', backref='location', cascade='all, delete-orphan', passive_deletes=True, lazy=True)
+    job_postings = db.relationship('JobPosting', backref='location', cascade='all, delete-orphan', passive_deletes=True, lazy=True)
 
     def __repr__(self):
         return '<Location {}>'.format(self.name)
