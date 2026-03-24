@@ -67,4 +67,5 @@ api.add_namespace(job_posting_ns, path=BASE_URL + "/jobPosting")
 api.add_namespace(all_ns, path=BASE_URL + "/allModels")
 api.add_namespace(file_ns, path=BASE_URL + "/file")
 
-CORS(api.blueprint)
+from app.main.config import Config
+CORS(api.blueprint, origins=Config.CORS_ORIGINS)

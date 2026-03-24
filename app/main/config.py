@@ -12,6 +12,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-only-fallback-key')
     DEBUG = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '*').split(',')
     SQLALCHEMY_ENGINE_OPTIONS = {
         'pool_pre_ping': True,
         'pool_size': 3,
