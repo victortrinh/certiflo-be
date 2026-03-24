@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 
 from .config import config_by_name
+from .middleware.error_handlers import register_error_handlers
 
 db = SQLAlchemy()
 flask_bcrypt = Bcrypt()
@@ -13,6 +14,8 @@ def create_app(config_name):
     app.config.from_object(config_by_name[config_name])
     db.init_app(app)
     flask_bcrypt.init_app(app)
+
+    register_error_handlers(app)
 
     @app.after_request
     def set_security_headers(response):
