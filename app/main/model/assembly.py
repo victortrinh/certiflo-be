@@ -5,7 +5,7 @@ class Assembly(db.Model):
     __tablename__ = "assemblies"
 
     id = db.Column(db.Integer, primary_key=True)
-    assemblyTypeId = db.Column(db.Integer, unique=False)
+    assemblyTypeId = db.Column(db.Integer, db.ForeignKey('assemblyTypes.id', ondelete='CASCADE'))
     image = db.Column(db.String(255), unique=False)
     nameEn = db.Column(db.String(255), unique=False)
     nameFr = db.Column(db.String(255), unique=False)

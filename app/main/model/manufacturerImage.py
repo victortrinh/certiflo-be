@@ -5,7 +5,7 @@ class ManufacturerImage(db.Model):
     __tablename__ = "manufacturerImages"
 
     id = db.Column(db.Integer, primary_key=True)
-    manufacturerId = db.Column(db.Integer, unique=False)
+    manufacturerId = db.Column(db.Integer, db.ForeignKey('manufacturer.id', ondelete='CASCADE'))
     image = db.Column(db.Text, unique=False)
     descriptionEn = db.Column(db.Text, unique=False)
     descriptionFr = db.Column(db.Text, unique=False)

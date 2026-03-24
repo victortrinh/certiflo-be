@@ -5,7 +5,7 @@ class GalleryImage(db.Model):
     __tablename__ = "galleryImages"
 
     id = db.Column(db.Integer, primary_key=True)
-    galleryId = db.Column(db.Integer, unique=False)
+    galleryId = db.Column(db.Integer, db.ForeignKey('galleries.id', ondelete='CASCADE'))
     image = db.Column(db.Text, unique=False)
     displayOrder = db.Column(db.Integer, unique=False)
     isCertipropane = db.Column(
