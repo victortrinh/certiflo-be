@@ -15,27 +15,29 @@ Single big-bang migration + service layer refactor. One migration handles all sc
 
 ## Relationships
 
-| Parent Model | Child Model | FK Column | Current Type | Relationship Attr |
-|-------------|-------------|-----------|-------------|-------------------|
-| AssemblyType | Assembly | assemblyTypeId | Integer | `assemblies` |
-| Gallery | GalleryImage | galleryId | Integer | `images` |
-| Location | Email | locationId | String → Integer | `emails` |
-| Location | Opening | locationId | String → Integer | `openings` |
-| Location | Telephone | locationId | String → Integer | `telephones` |
-| Location | JobPosting | locationId | Integer | `job_postings` |
-| Manufacturer | ManufacturerImage | manufacturerId | Integer | `images` |
-| RealizationType | Realization | realizationTypeId | Integer | `realizations` |
-| TankerType | Tanker | tankerTypeId | Integer | `tankers` |
+| Parent Model | Parent Table | Child Model | FK Column | FK Reference | Current Type | Relationship Attr |
+|-------------|-------------|-------------|-----------|-------------|-------------|-------------------|
+| AssemblyType | `assemblyTypes` | Assembly | assemblyTypeId | `assemblyTypes.id` | Integer | `assemblies` |
+| Gallery | `galleries` | GalleryImage | galleryId | `galleries.id` | Integer | `images` |
+| Location | `locations` | Email | locationId | `locations.id` | String → Integer | `emails` |
+| Location | `locations` | Opening | locationId | `locations.id` | String → Integer | `openings` |
+| Location | `locations` | Telephone | locationId | `locations.id` | String → Integer | `telephones` |
+| Location | `locations` | JobPosting | locationId | `locations.id` | Integer | `job_postings` |
+| Manufacturer | `manufacturer` | ManufacturerImage | manufacturerId | `manufacturer.id` | Integer | `images` |
+| RealizationType | `realizationTypes` | Realization | realizationTypeId | `realizationTypes.id` | Integer | `realizations` |
+| TankerType | `tankerTypes` | Tanker | tankerTypeId | `tankerTypes.id` | Integer | `tankers` |
+
+Note: `manufacturer` table name is singular while all others are plural.
 
 ## Model Changes
 
 ### Child models — add `db.ForeignKey()`
 
-Each FK column gets a foreign key constraint with `ondelete='CASCADE'`:
+Each FK column gets a foreign key constraint with `ondelete='CASCADE'`. Columns remain nullable (matching current behavior — no `nullable=False` added to avoid migration failures on existing NULL data):
 
 ```python
 # Example: Assembly
-assemblyTypeId = db.Column(db.Integer, db.ForeignKey('assembly_type.id', ondelete='CASCADE'), nullable=False)
+assemblyTypeId = db.Column(db.Integer, db.ForeignKey('assemblyTypes.id', ondelete='CASCADE'))
 ```
 
 For `Email`, `Opening`, `Telephone` — change column type from `String(255)` to `Integer` simultaneously.
@@ -60,13 +62,45 @@ Full list of parent relationship attributes:
 - `RealizationType.realizations` (backref: `realization_type`)
 - `TankerType.tankers` (backref: `tanker_type`)
 
+Ensure no backref name collides with an existing column on the child model. Verified: no collisions exist currently.
+
 ## Migration
 
-Single Alembic migration:
+Single Alembic migration with 3 internal phases:
 
-1. Convert `locationId` from `String(255)` to `Integer` in `email`, `opening`, `telephone` tables using `USING location_id::integer` (PostgreSQL)
-2. Add `FOREIGN KEY` constraints with `ON DELETE CASCADE` on all 8 columns
-3. Downgrade reverses: drop foreign keys, convert `locationId` back to `String(255)`
+### Phase 1: Data cleanup
+
+Before adding constraints, clean up any orphaned data:
+
+```sql
+-- Remove orphaned children referencing nonexistent parents
+DELETE FROM assemblies WHERE "assemblyTypeId" NOT IN (SELECT id FROM "assemblyTypes");
+DELETE FROM "galleryImages" WHERE "galleryId" NOT IN (SELECT id FROM galleries);
+DELETE FROM "manufacturerImages" WHERE "manufacturerId" NOT IN (SELECT id FROM manufacturer);
+DELETE FROM realizations WHERE "realizationTypeId" NOT IN (SELECT id FROM "realizationTypes");
+DELETE FROM tankers WHERE "tankerTypeId" NOT IN (SELECT id FROM "tankerTypes");
+DELETE FROM "jobPostings" WHERE "locationId" NOT IN (SELECT id FROM locations);
+
+-- For String columns: remove rows with non-numeric or empty locationId, then orphans
+DELETE FROM emails WHERE "locationId" !~ '^\d+$';
+DELETE FROM emails WHERE CAST("locationId" AS INTEGER) NOT IN (SELECT id FROM locations);
+DELETE FROM openings WHERE "locationId" !~ '^\d+$';
+DELETE FROM openings WHERE CAST("locationId" AS INTEGER) NOT IN (SELECT id FROM locations);
+DELETE FROM telephones WHERE "locationId" !~ '^\d+$';
+DELETE FROM telephones WHERE CAST("locationId" AS INTEGER) NOT IN (SELECT id FROM locations);
+```
+
+### Phase 2: Type conversion
+
+Convert `locationId` from `String(255)` to `Integer` in `emails`, `openings`, `telephones` tables using `USING "locationId"::integer`.
+
+### Phase 3: Add foreign key constraints
+
+Add `FOREIGN KEY` with `ON DELETE CASCADE` on all 9 FK columns. Add index on each FK column for cascade delete performance.
+
+### Downgrade
+
+Reverses: drop foreign keys and indexes, convert `locationId` back to `String(255)`.
 
 ## Service Layer Refactor
 
@@ -76,11 +110,13 @@ Parent delete services automatically clean up children — no manual child delet
 
 ### API contract
 
-No changes to API response shape. The frontend currently expects flat lists from `/all` endpoint and that stays the same. The refactor is backend-internal only.
+No changes to API response shape. The frontend currently expects flat lists from the `/all` endpoint and that stays the same. Parent `serialize()` methods must NOT include relationship data to avoid N+1 queries on the `/all` endpoint.
+
+Note: `locationId` in `Email`, `Opening`, and `Telephone` API responses will change from string to integer after the type conversion. The frontend should be verified to handle this (most JSON parsers/frameworks handle this transparently).
 
 ### Column naming
 
-Keep existing camelCase column names (`assemblyTypeId`, `galleryId`, etc.) to avoid breaking the frontend API contract. Can be addressed in a separate cleanup.
+Keep existing camelCase column names (`assemblyTypeId`, `galleryId`, etc.) to avoid breaking the frontend API contract.
 
 ## Files Changed
 
