@@ -44,13 +44,6 @@ api = Api(blueprint,
           }
           )
 
-api.blueprint.after_request
-
-
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', '*')
-
-
 api.add_namespace(user_ns, path=BASE_URL + '/user')
 api.add_namespace(auth_ns, path=BASE_URL + '/auth')
 api.add_namespace(resource_ns, path=BASE_URL + '/resource')
