@@ -53,7 +53,7 @@ class Download(Resource):
     @api.doc(security='Bearer')
     @api.doc('Download file')
     def get(self, fileName):
-        return send_from_directory(UPLOAD_DIRECTORY, fileName, as_attachment=True)
+        return send_from_directory(UPLOAD_DIRECTORY, secure_filename(fileName), as_attachment=True)
 
 
 @api.route('/upload')
