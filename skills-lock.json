@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "api-security-best-practices": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "ce16d10df486a28a3ba894d646de3243fc2bf9990f563fc7a9b074fd720e24d5"
+    },
+    "database-migrations": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "c27f9b1edf5bfecabb5a5a345f476a46566ce29e29e4b9d4c80d336ef5ca784f"
+    },
+    "flask-python": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "computedHash": "7e55af409afc150c883017cbd8ee290d480b3f8013aab813db40868829707369"
+    },
+    "postgresql-expert-best-practices-code-review": {
+      "source": "wispbit-ai/skills",
+      "sourceType": "github",
+      "computedHash": "aa7decc6f6377ed6878301eb26582d411d721a446927f22e17b4c394b883a6c6"
+    },
+    "python-testing": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "c3b4ee30765eae26190412c1d0c81e078680511094eabf42c043e4e5a1c12d9c"
+    }
+  }
+}
