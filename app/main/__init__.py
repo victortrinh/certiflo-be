@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
@@ -13,6 +15,13 @@ flask_bcrypt = Bcrypt()
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config_by_name[config_name])
+
+    if config_name == 'prod':
+        if not os.environ.get('SECRET_KEY'):
+            raise ValueError('SECRET_KEY environment variable is required in production')
+        if not app.config.get('SQLALCHEMY_DATABASE_URI'):
+            raise ValueError('DATABASE_URL environment variable is required in production')
+
     db.init_app(app)
     flask_bcrypt.init_app(app)
     limiter.init_app(app)
