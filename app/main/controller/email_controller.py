@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.email_service import get_emails, save_new_email, delete_email, update_emails
 from ..dto.email_dto import EmailDTO

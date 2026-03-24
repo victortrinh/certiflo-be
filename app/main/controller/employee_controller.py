@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.employee_service import get_employees, save_new_employee, delete_employee, update_employees
 from ..dto.employee_dto import EmployeeDTO

@@ -1,4 +1,4 @@
-from flask_restplus import Namespace, fields
+from flask_restx import Namespace, fields
 
 class AuthDto:
     api = Namespace('Authentication', description='authentication related operations')

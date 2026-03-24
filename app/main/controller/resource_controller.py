@@ -1,4 +1,4 @@
-from flask_restplus import Resource, Namespace
+from flask_restx import Resource, Namespace
 from flask import request
 from ..service.resources_service import get_all_resources, get_resources_by_page_and_language, save_new_resource, update_resource, get_resources_by_language, delete_resource, update_resource_by_id_and_language
 from ..dto.resources_dto import ResourceDTO

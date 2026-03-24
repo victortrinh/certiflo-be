@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.telephone_service import get_telephones, save_new_telephone, delete_telephone, update_telephones
 from ..dto.telephone_dto import TelephoneDTO

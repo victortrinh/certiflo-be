@@ -1,21 +1,21 @@
 [{
         "email": "bernard.gelinas@certiflo.ca",
         "username": "bgelinas",
-        "password": "Certiflo1234"
+        "password": "CHANGE_ME"
     },
     {
         "email": "yves.talbot@certiflo.ca",
         "username": "ytalbot",
-        "password": "Certiflo1234"
+        "password": "CHANGE_ME"
     },
     {
         "email": "jacques.roy2@certiflo.ca",
         "username": "jroy",
-        "password": "Certiflo1234"
+        "password": "CHANGE_ME"
     },
     {
         "email": "test@test.com",
         "username": "test",
-        "password": "test"
+        "password": "CHANGE_ME"
     }
 ]

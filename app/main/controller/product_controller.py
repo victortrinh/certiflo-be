@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.product_service import get_products, save_new_product, delete_product, update_products
 from ..dto.product_dto import ProductDTO

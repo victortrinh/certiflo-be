@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.opening_service import get_openings, save_new_opening, delete_opening, update_openings
 from ..dto.opening_dto import OpeningDTO

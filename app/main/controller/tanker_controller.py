@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.tanker_service import get_tankers, save_new_tanker, delete_tanker, update_tankers
 from ..dto.tanker_dto import TankerDTO

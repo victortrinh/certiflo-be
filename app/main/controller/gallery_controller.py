@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.gallery_service import get_galleries, save_new_gallery, delete_gallery, update_galleries
 from ..dto.gallery_dto import GalleryDTO

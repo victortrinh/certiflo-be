@@ -1,6 +1,6 @@
 import os
 
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request, jsonify, send_from_directory
 from ..dto.file_dto import FileDTO
 from ..service.all_service import get_all

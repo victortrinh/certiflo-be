@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.tankerType_service import get_tankerTypes, save_new_tankerType, delete_tankerType, update_tankerTypes
 from ..service.auth_service import Auth

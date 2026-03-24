@@ -1,4 +1,4 @@
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import request
 from ..service.manufacturer_service import get_all_manufacturer, save_new_manufacturer, delete_manufacturer, update_manufacturers
 from ..dto.manufacturer_dto import ManufacturerDTO
